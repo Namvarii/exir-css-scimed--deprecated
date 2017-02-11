@@ -1,0 +1,23 @@
+{
+	"name": "scimed",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"webpack-dev": "webpack --config webpack-dev.config.js --watch --progress",
+		"bs": "node server.js",
+		"start": "npm run bs | npm run webpack-dev"
+	},
+	"repository": {},
+	"license": "MIT",
+	"devDependencies": {
+		"browser-sync": "^2.18.7",
+		"css-loader": "^0.26.1",
+		"node-sass": "^4.5.0",
+		"sass-loader": "^5.0.1",
+		"style-loader": "^0.13.1",
+		"webpack": "^2.2.1"
+	},
+	"dependencies": {
+		"normalize.css": "^5.0.0"
+	}
+}
