@@ -1,0 +1,19 @@
+.header {
+   padding: 15px;
+
+   .header__logo {
+      text-align: center;
+      @include breakpoint(medium) {
+         text-align: right;
+      }
+   }
+
+   .header__p-stat-table {
+      margin: 20px 0;
+      @include breakpoint(medium) {
+         margin: 15px 0;
+         width: auto;
+         float: left;
+      }
+   }
+}
