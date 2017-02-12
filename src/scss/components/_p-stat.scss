@@ -35,11 +35,11 @@
 
    &__image {
       display: none;
-      @include breakpoint(752px) {
+      @include breakpoint(medium) {
          display: block;
          width: 110px;
          float: left;
-         margin: 7px 0;
+         margin: 12px 0;
       }
    }
 }
