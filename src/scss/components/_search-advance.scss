@@ -1,0 +1,24 @@
+.search-advance {
+   background: map_get($color-palette, 'geyser');
+   padding: rem-calc(15px);
+   border-radius: 2px;
+   margin-top: 10px;
+
+   &__header {
+       font-weight: 500;
+       margin-bottom: 2rem;
+   }
+
+   &__label {
+       font-family: Rezvan !important ;
+       font-size: 18px;
+       font-weight: 500;
+   }
+
+   &__select {
+       background-image: none;
+       border-radius: 5px;
+       font-family: Vazir;
+       font-size: 14px;
+   }
+}

@@ -1,0 +1,28 @@
+.main-footer {
+    background: -webkit-linear-gradient(top,#dfe5e6,#fff 60px);
+    background: linear-gradient(180deg,#dfe5e6,#fff 60px);
+    border-top: 30px solid #bdbdbd;
+    padding: 20px 30px 30px;
+    margin-top: 40px;
+
+    &__header {
+        color: #2b59a6;
+        font-family: Rezvan;
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &__body {
+        text-align: justify;
+        margin: 10px 0;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__table {
+        text-align: right;
+    }
+
+}
+
