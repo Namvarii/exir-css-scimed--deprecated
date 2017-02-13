@@ -1,4 +1,4 @@
 /**
  * Created by navid on 2/11/2017.
  */
-import '../scss/general.scss'
+import '../scss/general.scss';

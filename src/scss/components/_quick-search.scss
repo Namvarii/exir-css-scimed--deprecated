@@ -2,7 +2,12 @@
    background: map_get($color-palette, 'iceberg');
    padding: rem-calc(15px);
    border-radius: 3px;
-   @include breakpoint(885) {
+   &:after {
+      content: '';
+      display: block;
+      clear: both;
+   }
+   @include breakpoint(large) {
       @include flex-grid-row(
          $wrap: false,
          $gutters: 0
@@ -10,7 +15,7 @@
    }
 
    &__column {
-      @include breakpoint(885) {
+      @include breakpoint(large) {
          margin: 0;
          @include flex-grid-column(expand, 15);
          min-height: rem-calc(50px);
@@ -20,7 +25,7 @@
 
    &__title {
       font-size: 14px;
-      @include breakpoint(885) {
+      @include breakpoint(large) {
          font-size: 22px;
          @include flex-grid-size(3);
       }
@@ -30,7 +35,9 @@
       border-color: $white;
       box-shadow: none;
       font-size: 14px;
-      border-radius: 0 9px 9px 0;
+      @include breakpoint(large) {
+         border-radius: 0 9px 9px 0;
+      }
    }
 
    &__select {
@@ -38,7 +45,7 @@
       font-weight: 600;
       border-color: $white;
       cursor: pointer;
-      @include breakpoint(885) {
+      @include breakpoint(large) {
          @include flex-grid-size(10%)
       }
 
@@ -49,8 +56,9 @@
          border-color: $scooter;
 
          &:focus {
-            color: $black;
-            background: $scooter;
+            border-color: $scooter;
+            background: lighten($scooter, 10);
+            box-shadow: none;
          }
       }
    }
@@ -61,11 +69,15 @@
       background: $white;
       border-right: 2px solid $white;
       display: inline-block;
-      padding: rem-calc(0 10px);
       text-align: center;
       font-weight: 600;
-      @include breakpoint(885) {
-         @include flex-grid-size(5%)
+      padding: rem-calc(10 15px);
+      min-width: 80px;
+      height: 40px;
+      float: left;
+      @include breakpoint(large) {
+         @include flex-grid-size(7%);
+         padding: rem-calc(0 15px);
       }
 
       &:focus {
@@ -83,7 +95,14 @@
       }
 
       &_border-left-radius {
-         border-radius: 10px 0 0 10px;
+         @include breakpoint(large) {
+            border-radius: 10px 0 0 10px;
+         }
       }
+   }
+
+   &__button-icon {
+      width: 30px;
+      max-height: 100%;
    }
 }
