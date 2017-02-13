@@ -1,0 +1,8 @@
+.quick-search {
+   background: map_get($color-palette, 'iceberg');
+   padding: rem-calc(15px);
+   border-radius: 2px;
+   @include flex-grid-row()
+
+
+}

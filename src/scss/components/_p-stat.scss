@@ -35,7 +35,7 @@
 
    &__image {
       display: none;
-      @include breakpoint(medium) {
+      @include breakpoint(752) {
          display: block;
          width: 110px;
          float: left;
