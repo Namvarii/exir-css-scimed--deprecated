@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	<title>بانک مقالات سامانه مدیریت داده‌های پژوهش و فناوری (سایمد)</title>
+	<title>بانک مقالات سامانه مدیریت داده‌های پژوهش و فناوری (سایمد)</title>	
 	<script src="dist/vendor.bundle.js"></script>
-	<link rel="stylesheet" href="dist/font/vazir/font-face.css">
+	<link rel="stylesheet" href="dist/font/font.css">
 </head>
 <body>
 <header class="header">
@@ -61,7 +61,322 @@
 			<img src="dist/image/magnifier-icon.svg" alt="search" width="30px">
 		</button>
 	</section>
+	<section id="search-advance">
+		<div class="row search-advance">
+			<div class="large-12 columns">
+				<h3 class="text-center search-advance__header">محدود کردن نتایج جستجو بر اساس افیلیشن</h3>
+			</div>
+
+			<div class="small-12 medium-6 large-3 columns">
+				<label class="text-center search-advance__label">نام دانشگاه
+					<select class="search-advance__select">
+						<option value="">دانشگاه تهران جنوب</option>
+						<option value="">دانشگاه اراک</option>
+						<option value="">دانشگاه اصفهان</option>
+						<option value="">دانشگاه تبریز</option>
+						<option value="">دانشگاه شیراز</option>
+						<option value="">دانشگاه مشهد</option>
+					</select>
+				</label>
+			</div>
+			<div class="small-12 medium-6 large-3 columns">
+				<label class="text-center search-advance__label">نام دانشکده
+					<select class="search-advance__select">
+						<option value="">دانشکده فنی مهندسی</option>
+						<option value="">دانشکده پزشکی</option>
+						<option value="">دانشکده علوم انسانی</option>
+					</select>
+				</label>
+			</div>
+			<div class="small-12 medium-6 large-3 columns">
+				<label class="text-center search-advance__label">نام مرکز تحقیقاتی
+					<select class="search-advance__select">
+						<option value="">مرکز تحقیقاتی بهار</option>
+						<option value="">مرکز تحقیقاتی اراک</option>
+						<option value="">مرکز تحقیقاتی اصفهان</option>
+						<option value="">مرکز تحقیقاتی تبریز</option>
+						<option value="">مرکز تحقیقاتی شیراز</option>
+						<option value="">مرکز تحقیقاتی مشهد</option>
+					</select>
+				</label>
+			</div>
+			<div class="small-12 medium-6 large-3 columns">
+				<label class="text-center search-advance__label">نام گروه
+					<select class="search-advance__select">
+						<option value="">گروه تهران</option>
+						<option value="">گروه اراک</option>
+						<option value="">گروه اصفهان</option>
+						<option value="">گروه تبریز</option>
+						<option value="">گروه شیراز</option>
+						<option value="">گروه مشهد</option>
+					</select>
+				</label>
+			</div>
+		</div>
+	</section>
 </main>
+<footer class="main-footer">
+    <div class="row">
+        <div class="small-12 medium-6 large-3 columns">
+            <h3 class="main-footer__header">
+                ارسال نظرات، درخواست تصحیح اطلاعات
+            </h3>
+            <p class="main-footer__body">
+				لطفا نظرات , پیشنهادات و انتقادات خود را در خصوص این سامانه و یا زیر سامانه های مرتبط از طریق پر نمودن فرم زیر به ما اعلام نمایید
+            </p>
+            <a class="_green _bold" data-open="FeedBackModal">درخواست ثبت اطلاعات در سایمد</a>
+			<div class="reveal" id="FeedBackModal" data-reveal>
+				<h4 class="modal-title stat__name">ارسال اطلاعات</h4>
+				<form action="/Home/FeedBack" class="" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()" novalidate="novalidate">
+					<div class="">
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
+									<i class="fa fa-user fa-book"></i>&nbsp;&nbsp;موضوع درخواست
+									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
+								</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<select data-val="true" data-val-required="The RequestTopic field is required." id="RequestTopic" name="RequestTopic"><option value="انتقاد">انتقاد</option>
+									<option value="پیشنهاد">پیشنهاد</option>
+									<option selected="selected" value="نام من در سایمد نیست">نام من در سایمد نیست</option>
+									<option value="سایر">سایر</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
+									<i class="fa fa-user fa-university"></i>&nbsp;&nbsp;نام دانشگاه
+									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
+								</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input data-val="true" data-val-required="The UniversityName field is required." id="UniversityName"
+									name="UniversityName" style="padding-left: 35px;" type="text" value="">
+								<span class="field-validation-valid" data-valmsg-for="UniversityName" data-valmsg-replace="false"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
+									<i class="fa fa-user fa-graduation-cap"></i>&nbsp;&nbsp;رشته
+									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
+								</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input data-val="true" data-val-required="The Field field is required." id="Field" name="Field" style="padding-left: 35px;"
+									type="text" value="">
+								<span class="field-validation-valid" data-valmsg-for="Field" data-valmsg-replace="false"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
+									<i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;نام
+									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
+								</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input data-val="true" data-val-required="The Name field is required." id="Name" name="Name" style="padding-left: 35px;"
+									type="text" value="">
+								<span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="false"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
+									<i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;نام خانوادگی
+									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
+								</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input data-val="true" data-val-required="The Family field is required." id="Family" name="Family" style="padding-left: 35px;"
+									type="text" value="">
+								<span class="field-validation-valid" data-valmsg-for="Family" data-valmsg-replace="false"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
+									<i class="fa fa-barcode"></i>&nbsp;&nbsp;کد ملی
+									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
+								</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input data-val="true" data-val-required="The NationalCode field is required." id="NationalCode" name="NationalCode"
+									style="padding-left: 35px;" type="text" value="">
+								<span class="field-validation-valid" data-valmsg-for="NationalCode" data-valmsg-replace="false"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
+									<i class="fa fa-mobile fa-fw"></i>&nbsp;&nbsp;موبایل
+									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
+								</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input data-val="true" data-val-required="The Mobile field is required." id="Mobile" name="Mobile" style="padding-left: 35px;"
+									type="text" value="">
+								<span class="field-validation-valid" data-valmsg-for="Mobile" data-valmsg-replace="false"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
+									<i class="fa fa-envelope fa-fw"></i>&nbsp;&nbsp;ایمیل
+									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
+								</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input data-val="true" data-val-required="The Email field is required." id="Email" name="Email" style="padding-left: 35px;"
+									type="text" value="">
+								<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="false"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-newspaper-o fa-fw"></i>&nbsp;&nbsp;Author ID</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input id="AuthorId" name="AuthorId" style="padding-left: 35px;" type="text" value="">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-google fa-fw"></i>&nbsp;&nbsp;GoogleScholar Address</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input id="GoogleScholarAddress" name="GoogleScholarAddress" style="padding-left: 35px;" type="text"
+									value="">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-wpforms fa-fw"></i>&nbsp;&nbsp;نام متداول فارسی</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input id="FaNickname" name="FaNickname" style="padding-left: 35px;" type="text" value="">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-wpforms fa-fw"></i>&nbsp;&nbsp;نام متداول انگلیسی 1</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input id="EnNickname1" name="EnNickname1" style="padding-left: 35px;" type="text" value="">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-wpforms fa-fw"></i>&nbsp;&nbsp;نام متداول انگلیسی 2</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input id="EnNickname2" name="EnNickname2" style="padding-left: 35px;" type="text" value="">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-wpforms fa-fw"></i>&nbsp;&nbsp;نام متداول انگلیسی 3</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input id="EnNickname3" name="EnNickname3" style="padding-left: 35px;" type="text" value="">
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-bars fa-fw"></i>&nbsp;&nbsp;شرح درخواست</h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="medium-1 columns2">
+								<textarea cols="70" id="Description" name="Description" rows="3" style="padding-left: 20px;"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 medium-5 columns">
+								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;حکم کارگزینی</h5>
+							</div>
+							<div class="small-12 medium-7 columns">
+								<input type="file" name="PersonelWarrant" style="padding:6px 12px">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div id="loading" class="fa fa-refresh fa-spin _green" style="display:none"></div>
+							<input type="submit" class="btn btn-primary" value="ارسال">
+						</div>
+					</div>
+				</form>
+            </div>
+            <script type="text/javascript">
+                function getResult() {
+                    $("#loading").show();
+                    toastr.success('ارسال اطلاعات برای ثبت در سایمد با موفقیت انجام شد');
+                    $('#FeedBackModal').hide();
+                    $('.modal-backdrop.fade.in').fadeOut();
+                    $("#loading").hide();
+                }
+            </script>
+        </div>
+        <div class="small-12 medium-6 large-3 columns">
+            <h3 class="main-footer__header">
+                آمار بازدید
+            </h3>
+            <p class="main-footer__body">
+            </p>
+            <div>
+                <table class="main-footer__table unstriped">
+                    <tbody>
+                        <tr>
+                            <th>کاربران آنلاین:</th>
+                            <td>۳</td>
+                        </tr>
+                        <tr>
+                            <th>بازدید امروز:</th>
+                            <td>۶</td>
+                        </tr>
+                        <tr>
+                            <th>بازدید کل:</th>
+                            <td>۴۵۶۳</td>
+                        </tr>
+                        <tr>
+                            <th>تعداد دانشگاه ها:</th>
+                            <td>۹۴</td>
+                        </tr>
+                        <tr>
+                            <th>تعداد مر اکز تحقیقاتی:</th>
+                            <td>۲۷</td>
+                        </tr>
+                        <tr>
+                            <th>اعضای هیأت علمی دارای پروفایل:</th>
+                            <td>۱۵۳۱</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p></p>
+        </div>
+        <div class="small-12 medium-6 large-3 columns">
+            <h3 class="main-footer__header">
+                تماس با ما
+            </h3>
+            <p class="main-footer__body">
+				آدرس :تهران، انتهای تهران، پونک، انتهای اشرفی اصفهانی، به سمت حصارک، سازمان مرکزی دانشگاه آزاد اسلامی، بلوک یک، طبقات پنجم، ششم و هفتم <br>
+				تلفن تماس :۴۷۳۵۱۷۰۲ <br>
+				پست الکترونیک :med.iau1392@gmail.com
+            </p>
+        </div>
+        <div class="small-12 medium-6 large-3 columns">
+            <h3 class="main-footer__header">
+                حفظ مالکیت معنوی
+            </h3>
+            <p class="main-footer__body">
+				کلیه حقوق این وب سایت و مطالب آن متعلق به گروه علم سنجی معاونت پزشکی دانشگاه آزاد اسلامی بوده و هر استفاده از مطالب آن با ذکر منبع بلامانع است.
+            </p>
+        </div>
+    </div>
+</footer>
 </body>
 <script src="dist/app.bundle.js"></script>
 </html>
