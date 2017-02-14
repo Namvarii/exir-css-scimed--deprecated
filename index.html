@@ -9,14 +9,14 @@
 </head>
 <body>
 <header class="header">
-	<div class="row align-top">
+	<div class="row">
 		<div class="medium-6 columns">
 			<div class="header__logo">
 				<img src="dist/image/logo.png" alt="بانک مقالات ">
 			</div>
 		</div>
 		<div class="medium-6 columns">
-			<table class="p-stat-table unstriped header__p-stat-table">
+			<table class="p-stat-table header__p-stat-table">
 				<tbody>
 				<tr>
 					<th>تعداد کل مقالات</th>
@@ -50,8 +50,6 @@
 		<input type="text" title="quick search" placeholder="کلید واژه بر اساس فیلد مورد نظر" class="quick-search__input quick-search__column"/>
 		<select class="quick-search__select quick-search__column quick-search__select_color-scooter" title="Article Title">
 			<option value="">عنوان مقاله</option>
-			<option value=""></option>
-			<option value=""></option>
 		</select>
 		<button type="button" class="button-slider quick-search__button quick-search__column quick-search__button_color-cold-purple">
 			<span class="button-slider__item">فارسی</span>
@@ -63,70 +61,67 @@
 			<img src="dist/image/magnifier-icon.svg" alt="search" class="quick-search__button-icon">
 		</button>
 	</section>
-	<section id="search-advance">
-		<div class="row search-advance">
-			<div class="large-12 columns">
-				<h3 class="text-center search-advance__header">محدود کردن نتایج جستجو بر اساس افیلیشن</h3>
-			</div>
-
-			<div class="small-12 medium-6 large-3 columns">
-				<label class="text-center search-advance__label">نام دانشگاه
-					<select class="search-advance__select">
-						<option value="">دانشگاه تهران جنوب</option>
-						<option value="">دانشگاه اراک</option>
-						<option value="">دانشگاه اصفهان</option>
-						<option value="">دانشگاه تبریز</option>
-						<option value="">دانشگاه شیراز</option>
-						<option value="">دانشگاه مشهد</option>
-					</select>
-				</label>
-			</div>
-			<div class="small-12 medium-6 large-3 columns">
-				<label class="text-center search-advance__label">نام دانشکده
-					<select class="search-advance__select">
-						<option value="">دانشکده فنی مهندسی</option>
-						<option value="">دانشکده پزشکی</option>
-						<option value="">دانشکده علوم انسانی</option>
-					</select>
-				</label>
-			</div>
-			<div class="small-12 medium-6 large-3 columns">
-				<label class="text-center search-advance__label">نام مرکز تحقیقاتی
-					<select class="search-advance__select">
-						<option value="">مرکز تحقیقاتی بهار</option>
-						<option value="">مرکز تحقیقاتی اراک</option>
-						<option value="">مرکز تحقیقاتی اصفهان</option>
-						<option value="">مرکز تحقیقاتی تبریز</option>
-						<option value="">مرکز تحقیقاتی شیراز</option>
-						<option value="">مرکز تحقیقاتی مشهد</option>
-					</select>
-				</label>
-			</div>
-			<div class="small-12 medium-6 large-3 columns">
-				<label class="text-center search-advance__label">نام گروه
-					<select class="search-advance__select">
-						<option value="">گروه تهران</option>
-						<option value="">گروه اراک</option>
-						<option value="">گروه اصفهان</option>
-						<option value="">گروه تبریز</option>
-						<option value="">گروه شیراز</option>
-						<option value="">گروه مشهد</option>
-					</select>
-				</label>
-			</div>
+	<section class="row search-advance">
+		<div class="large-12 columns">
+			<h2 class="text-center search-advance__header">محدود کردن نتایج جستجو بر اساس افیلیشن</h2>
+		</div>
+		<div class="small-12 medium-6 large-3 columns">
+			<label class="text-center search-advance__label">نام دانشگاه
+				<select class="search-advance__select">
+					<option value="">دانشگاه تهران جنوب</option>
+					<option value="">دانشگاه اراک</option>
+					<option value="">دانشگاه اصفهان</option>
+					<option value="">دانشگاه تبریز</option>
+					<option value="">دانشگاه شیراز</option>
+					<option value="">دانشگاه مشهد</option>
+				</select>
+			</label>
+		</div>
+		<div class="small-12 medium-6 large-3 columns">
+			<label class="text-center search-advance__label">نام دانشکده
+				<select class="search-advance__select">
+					<option value="">دانشکده فنی مهندسی</option>
+					<option value="">دانشکده پزشکی</option>
+					<option value="">دانشکده علوم انسانی</option>
+				</select>
+			</label>
+		</div>
+		<div class="small-12 medium-6 large-3 columns">
+			<label class="text-center search-advance__label">نام مرکز تحقیقاتی
+				<select class="search-advance__select">
+					<option value="">مرکز تحقیقاتی بهار</option>
+					<option value="">مرکز تحقیقاتی اراک</option>
+					<option value="">مرکز تحقیقاتی اصفهان</option>
+					<option value="">مرکز تحقیقاتی تبریز</option>
+					<option value="">مرکز تحقیقاتی شیراز</option>
+					<option value="">مرکز تحقیقاتی مشهد</option>
+				</select>
+			</label>
+		</div>
+		<div class="small-12 medium-6 large-3 columns">
+			<label class="text-center search-advance__label">نام گروه
+				<select class="search-advance__select">
+					<option value="">گروه تهران</option>
+					<option value="">گروه اراک</option>
+					<option value="">گروه اصفهان</option>
+					<option value="">گروه تبریز</option>
+					<option value="">گروه شیراز</option>
+					<option value="">گروه مشهد</option>
+				</select>
+			</label>
 		</div>
 	</section>
 </main>
-<footer class="main-footer">
+<footer class="footer">
 	<div class="row">
 		<div class="small-12 medium-6 large-3 columns">
-			<h3 class="main-footer__header">
+			<h3 class="footer__header">
 				ارسال نظرات، درخواست تصحیح اطلاعات
 			</h3>
-			<p class="main-footer__body">
+			<p class="footer__body">
 				لطفا نظرات , پیشنهادات و انتقادات خود را در خصوص این سامانه و یا زیر سامانه های مرتبط از طریق پر نمودن فرم زیر به ما اعلام نمایید
 			</p>
-			<a class="_green _bold" data-open="FeedBackModal">درخواست ثبت اطلاعات در سایمد</a>
+			<a class="footer__link" data-open="FeedBackModal">درخواست ثبت اطلاعات در سایمد</a>
 			<div class="reveal" id="FeedBackModal" data-reveal>
 				<h4 class="modal-title stat__name">ارسال اطلاعات</h4>
 				<form action="/Home/FeedBack" class="" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()"
@@ -340,48 +335,43 @@
 			</script>
 		</div>
 		<div class="small-12 medium-6 large-3 columns">
-			<h3 class="main-footer__header">
+			<h3 class="footer__header">
 				آمار بازدید
 			</h3>
-			<p class="main-footer__body">
-			</p>
-			<div>
-				<table class="main-footer__table unstriped">
-					<tbody>
-					<tr>
-						<th>کاربران آنلاین:</th>
-						<td>۳</td>
-					</tr>
-					<tr>
-						<th>بازدید امروز:</th>
-						<td>۶</td>
-					</tr>
-					<tr>
-						<th>بازدید کل:</th>
-						<td>۴۵۶۳</td>
-					</tr>
-					<tr>
-						<th>تعداد دانشگاه ها:</th>
-						<td>۹۴</td>
-					</tr>
-					<tr>
-						<th>تعداد مر اکز تحقیقاتی:</th>
-						<td>۲۷</td>
-					</tr>
-					<tr>
-						<th>اعضای هیأت علمی دارای پروفایل:</th>
-						<td>۱۵۳۱</td>
-					</tr>
-					</tbody>
-				</table>
-			</div>
-			<p></p>
+			<table class="footer__table unstriped">
+				<tbody>
+				<tr>
+					<th>کاربران آنلاین:</th>
+					<td>۳</td>
+				</tr>
+				<tr>
+					<th>بازدید امروز:</th>
+					<td>۶</td>
+				</tr>
+				<tr>
+					<th>بازدید کل:</th>
+					<td>۴۵۶۳</td>
+				</tr>
+				<tr>
+					<th>تعداد دانشگاه ها:</th>
+					<td>۹۴</td>
+				</tr>
+				<tr>
+					<th>تعداد مر اکز تحقیقاتی:</th>
+					<td>۲۷</td>
+				</tr>
+				<tr>
+					<th>اعضای هیأت علمی دارای پروفایل:</th>
+					<td>۱۵۳۱</td>
+				</tr>
+				</tbody>
+			</table>
 		</div>
 		<div class="small-12 medium-6 large-3 columns">
-			<h3 class="main-footer__header">
+			<h3 class="footer__header">
 				تماس با ما
 			</h3>
-			<p class="main-footer__body">
+			<p class="footer__body">
 				آدرس :تهران، انتهای تهران، پونک، انتهای اشرفی اصفهانی، به سمت حصارک، سازمان مرکزی دانشگاه آزاد اسلامی، بلوک یک، طبقات پنجم، ششم و هفتم
 				<br>
 				تلفن تماس :۴۷۳۵۱۷۰۲ <br>
@@ -389,10 +379,10 @@
 			</p>
 		</div>
 		<div class="small-12 medium-6 large-3 columns">
-			<h3 class="main-footer__header">
+			<h3 class="footer__header">
 				حفظ مالکیت معنوی
 			</h3>
-			<p class="main-footer__body">
+			<p class="footer__body">
 				کلیه حقوق این وب سایت و مطالب آن متعلق به گروه علم سنجی معاونت پزشکی دانشگاه آزاد اسلامی بوده و هر استفاده از مطالب آن با ذکر منبع بلامانع
 				است.
 			</p>
