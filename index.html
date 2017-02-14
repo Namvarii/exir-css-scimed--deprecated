@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress HtmlFormInputWithoutLabel -->
 <html lang="fa" dir="rtl">
 <head>
 	<meta charset="UTF-8">
@@ -176,15 +177,15 @@
 			<a class="footer__link" data-open="submit-form">درخواست ثبت اطلاعات در سایمد</a>
 			<div class="reveal" data-reveal="submit-form">
 				<h4 class="modal-title stat__name">ارسال اطلاعات</h4>
-				<form action="/Home/FeedBack" class="" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()"
+				<form class="" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()"
 						novalidate="novalidate">
 					<div class="">
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
-									<i class="fa fa-user fa-book"></i>&nbsp;&nbsp;موضوع درخواست
-									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
-								</h5>
+								<div class="name-filter__name">
+									<i class="fa fa-user fa-book"></i>موضوع درخواست
+									<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
 								<select data-val="true" data-val-required="The RequestTopic field is required." id="RequestTopic" name="RequestTopic">
@@ -197,194 +198,192 @@
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
-									<i class="fa fa-user fa-university"></i>&nbsp;&nbsp;نام دانشگاه
-									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
-								</h5>
+								<div class="name-filter__name">
+									<i class="fa fa-user fa-university"></i>نام دانشگاه
+									<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
 								<input data-val="true" data-val-required="The UniversityName field is required." id="UniversityName"
-										 name="UniversityName" style="padding-left: 35px;" type="text" value="">
+										 name="UniversityName" type="text" value="">
 								<span class="field-validation-valid" data-valmsg-for="UniversityName" data-valmsg-replace="false"> </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
-									<i class="fa fa-user fa-graduation-cap"></i>&nbsp;&nbsp;رشته
-									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
-								</h5>
+								<div class="name-filter__name">
+									<i class="fa fa-user fa-graduation-cap"></i>رشته
+									<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input data-val="true" data-val-required="The Field field is required." id="Field" name="Field" style="padding-left: 35px;"
+								<input data-val="true" data-val-required="The Field field is required." id="Field" name="Field"
 										 type="text" value="">
 								<span class="field-validation-valid" data-valmsg-for="Field" data-valmsg-replace="false"> </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
-									<i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;نام
-									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
-								</h5>
+								<div class="name-filter__name">
+									<i class="fa fa-user fa-fw"></i>نام
+									<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input data-val="true" data-val-required="The Name field is required." id="Name" name="Name" style="padding-left: 35px;"
+								<input data-val="true" data-val-required="The Name field is required." id="Name" name="Name"
 										 type="text" value="">
 								<span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="false"> </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
-									<i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;نام خانوادگی
-									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
-								</h5>
+								<div class="name-filter__name">
+									<i class="fa fa-user fa-fw"></i>نام خانوادگی
+									<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input data-val="true" data-val-required="The Family field is required." id="Family" name="Family" style="padding-left: 35px;"
+								<input data-val="true" data-val-required="The Family field is required." id="Family" name="Family"
 										 type="text" value="">
 								<span class="field-validation-valid" data-valmsg-for="Family" data-valmsg-replace="false"> </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
-									<i class="fa fa-barcode"></i>&nbsp;&nbsp;کد ملی
-									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
-								</h5>
+								<div class="name-filter__name">
+									<i class="fa fa-barcode"></i>کد ملی
+									<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
 								<input data-val="true" data-val-required="The NationalCode field is required." id="NationalCode" name="NationalCode"
-										 style="padding-left: 35px;" type="text" value="">
+										 type="text" value="">
 								<span class="field-validation-valid" data-valmsg-for="NationalCode" data-valmsg-replace="false"> </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
-									<i class="fa fa-mobile fa-fw"></i>&nbsp;&nbsp;موبایل
-									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
-								</h5>
+								<div class="name-filter__name">
+									<i class="fa fa-mobile fa-fw"></i>موبایل
+									<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input data-val="true" data-val-required="The Mobile field is required." id="Mobile" name="Mobile" style="padding-left: 35px;"
+								<input data-val="true" data-val-required="The Mobile field is required." id="Mobile" name="Mobile"
 										 type="text" value="">
 								<span class="field-validation-valid" data-valmsg-for="Mobile" data-valmsg-replace="false"> </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;">
-									<i class="fa fa-envelope fa-fw"></i>&nbsp;&nbsp;ایمیل
-									<sup><i class="fa fa-fw fa-asterisk" style="color:red; font-size:.7em;"></i></sup>
-								</h5>
+								<div class="name-filter__name">
+									<i class="fa fa-envelope fa-fw"></i>ایمیل
+									<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input data-val="true" data-val-required="The Email field is required." id="Email" name="Email" style="padding-left: 35px;"
+								<input data-val="true" data-val-required="The Email field is required." id="Email" name="Email"
 										 type="text" value="">
 								<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="false"> </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-newspaper-o fa-fw"></i>
-									&nbsp;&nbsp;Author
-									ID</h5>
+								<div class="name-filter__name"><i class="fa fa-newspaper-o fa-fw"></i>
+									Author
+									ID
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input id="AuthorId" name="AuthorId" style="padding-left: 35px;" type="text" value="">
+								<input id="AuthorId" name="AuthorId" type="text" value="">
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-google fa-fw"></i>
-									&nbsp;&nbsp;GoogleScholar
-									Address</h5>
+								<div class="name-filter__name"><i class="fa fa-google fa-fw"></i>
+									GoogleScholar
+									Address
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input id="GoogleScholarAddress" name="GoogleScholarAddress" style="padding-left: 35px;" type="text"
+								<input id="GoogleScholarAddress" name="GoogleScholarAddress" type="text"
 										 value="">
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-wpforms fa-fw"></i>
-									&nbsp;&nbsp;نام
-									متداول فارسی</h5>
+								<div class="name-filter__name"><i class="fa fa-wpforms fa-fw"></i>
+									نام
+									متداول فارسی
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input id="FaNickname" name="FaNickname" style="padding-left: 35px;" type="text" value="">
+								<input id="FaNickname" name="FaNickname" type="text" value="">
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-wpforms fa-fw"></i>
-									&nbsp;&nbsp;نام
-									متداول انگلیسی 1</h5>
+								<div class="name-filter__name"><i class="fa fa-wpforms fa-fw"></i>
+									نام
+									متداول انگلیسی 1
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input id="EnNickname1" name="EnNickname1" style="padding-left: 35px;" type="text" value="">
+								<input id="EnNickname1" name="EnNickname1" type="text" value="">
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-wpforms fa-fw"></i>
-									&nbsp;&nbsp;نام
-									متداول انگلیسی 2</h5>
+								<div class="name-filter__name"><i class="fa fa-wpforms fa-fw"></i>
+									نام
+									متداول انگلیسی 2
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input id="EnNickname2" name="EnNickname2" style="padding-left: 35px;" type="text" value="">
+								<input id="EnNickname2" name="EnNickname2" type="text" value="">
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-wpforms fa-fw"></i>
-									&nbsp;&nbsp;نام
-									متداول انگلیسی 3</h5>
+								<div class="name-filter__name"><i class="fa fa-wpforms fa-fw"></i>
+									نام
+									متداول انگلیسی 3
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input id="EnNickname3" name="EnNickname3" style="padding-left: 35px;" type="text" value="">
+								<input id="EnNickname3" name="EnNickname3" type="text" value="">
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-bars fa-fw"></i>
-									&nbsp;&nbsp;شرح
-									درخواست</h5>
+								<div class="name-filter__name"><i class="fa fa-bars fa-fw"></i>
+									شرح
+									درخواست
+								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="medium-1 columns2">
-								<textarea cols="70" id="Description" name="Description" rows="3" style="padding-left: 20px;"></textarea>
+								<textarea cols="70" id="Description" name="Description" rows="3"></textarea>
 							</div>
 						</div>
 						<div class="row">
 							<div class="small-12 medium-5 columns">
-								<h5 class="name-filter__name" style="color: rgb(22, 91, 166); font-weight: bold;"><i class="fa fa-file-archive-o"></i>
-									&nbsp;&nbsp;حکم
-									کارگزینی</h5>
+								<div class="name-filter__name"><i class="fa fa-file-archive-o"></i>
+									حکم
+									کارگزینی
+								</div>
 							</div>
 							<div class="small-12 medium-7 columns">
-								<input type="file" name="PersonelWarrant" style="padding:6px 12px">
+								<input type="file" name="PersonelWarrant">
 							</div>
 						</div>
 						<div class="modal-footer">
-							<div id="loading" class="fa fa-refresh fa-spin _green" style="display:none"></div>
 							<input type="submit" class="btn btn-primary" value="ارسال">
 						</div>
 					</div>
 				</form>
 			</div>
-			<script type="text/javascript">
-				function getResult() {
-				$( "#loading" ).show();
-				toastr.success( 'ارسال اطلاعات برای ثبت در سایمد با موفقیت انجام شد' );
-				$( '#FeedBackModal' ).hide();
-				$( '.modal-backdrop.fade.in' ).fadeOut();
-				$( "#loading" ).hide();
-				}
-			</script>
 		</div>
 		<div class="columns column-block">
 			<h3 class="footer__header">
