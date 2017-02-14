@@ -1,8 +1,15 @@
-.search-advance {
-   background: map_get($color-palette, 'geyser');
+.search-detail {
+   background: map_get($color-palette, 'jagged-ice');
    padding: $global-section-padding;
    border-radius: $global-section-border;
    margin-top: $global-section-margin;
+
+   &__image {
+       margin: $global-image-margin;
+       margin-bottom: 10px;
+       width: auto;
+       height: 90px;
+   }
 
    &__header {
        font-weight: 500;

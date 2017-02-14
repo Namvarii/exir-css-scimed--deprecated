@@ -4,6 +4,14 @@
     border-top: 30px solid #bdbdbd;
     padding: 20px 30px 30px;
     margin-top: 40px;
+    $table-padding: rem-calc(2 5 5);
+
+    tbody {
+        th,
+        td {
+            padding: $table-padding;
+        }
+    }
 
     &__header {
         color: #2b59a6;
@@ -23,5 +31,5 @@
     &__table {
         text-align: right;
     }
-
-}
+    
+ }

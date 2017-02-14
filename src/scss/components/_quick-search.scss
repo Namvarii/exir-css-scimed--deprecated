@@ -1,7 +1,7 @@
 .quick-search {
    background: map_get($color-palette, 'iceberg');
-   padding: rem-calc(15px);
-   border-radius: 3px;
+   padding: rem-calc(15);
+   border-radius: $global-section-border;
    &:after {
       content: '';
       display: block;
