@@ -24,9 +24,9 @@
    }
 
    &__title {
-      font-size: 14px;
+      text-align: center;
       @include breakpoint(large) {
-         font-size: 22px;
+         text-align: right;
          @include flex-grid-size(3);
       }
    }
@@ -36,7 +36,7 @@
       box-shadow: none;
       font-size: 14px;
       @include breakpoint(large) {
-         border-radius: 0 9px 9px 0;
+         border-radius: rem-calc(0 9px 9px 0);
       }
    }
 
@@ -67,13 +67,13 @@
       font-family: Vazir, sans-serif;
       cursor: pointer;
       background: $white;
-      border-right: 2px solid $white;
+      border-right: rem-calc(2px) solid $white;
       display: inline-block;
       text-align: center;
       font-weight: 600;
       padding: rem-calc(10 15px);
-      min-width: 80px;
-      height: 40px;
+      min-width: rem-calc(80px);
+      height: rem-calc(40px);
       float: left;
       @include breakpoint(large) {
          @include flex-grid-size(7%);
@@ -82,21 +82,29 @@
 
       &:focus {
          outline: none;
+         background-color: darken($white, 10);
       }
 
       &_color-cold-purple {
+         $color: map-get($color-palette, 'cold-purple');
          color: $white;
-         background-color: map-get($color-palette, 'cold-purple');
+         background-color: $color;
+         &:focus {
+            background-color: lighten($color, 10);
+         }
       }
 
       &_color-primary {
          color: $white;
          background-color: $primary-color;
+         &:focus {
+            background-color: lighten($primary-color, 10);
+         }
       }
 
       &_border-left-radius {
          @include breakpoint(large) {
-            border-radius: 10px 0 0 10px;
+            border-radius: rem-calc(10px 0 0 10px);
          }
       }
    }
