@@ -45,6 +45,8 @@
       font-weight: 600;
       border-color: $white;
       cursor: pointer;
+      appearance: menulist-button;
+      line-height: 1em;
       @include breakpoint(large) {
          @include flex-grid-size(10%)
       }
