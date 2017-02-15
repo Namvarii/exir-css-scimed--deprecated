@@ -17,15 +17,6 @@ module.exports = function() {
       module: {
          rules: [
             {
-               test: /\.(woff|woff2|ttf|eot)$/,
-               use: {
-                  loader: 'url-loader',
-                  options: {
-                     limit: '10000'
-                  }
-               }
-            },
-            {
                test: /\.js(x)?$/,
                exclude: /node_modules/,
                use: 'babel-loader'
