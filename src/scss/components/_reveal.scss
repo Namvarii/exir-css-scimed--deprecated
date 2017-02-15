@@ -1,0 +1,25 @@
+.reveal {
+    padding: 1rem 0;
+    &__title {
+        border-bottom: 1px solid #ccc;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 0 1rem 1rem;
+        margin-bottom: 15px;
+    }
+    &__select {
+        font-size: .9rem;
+        font-weight: 600;
+        margin-bottom: .5rem;
+    }
+    &reveal__input {
+        font-size: .9rem;
+        font-weight: 600;
+    }
+}
+
+.close-button {
+    top: .85rem;
+    right: auto;
+    left: 1rem;
+}
