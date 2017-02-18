@@ -8,6 +8,8 @@
 	<title>بانک مقالات سامانه مدیریت داده‌های پژوهش و فناوری (سایمد)</title>
 	<script src="dist/vendor.bundle.js"></script>
 	<link rel="stylesheet" href="dist/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="dist/vendor/select2/css/select2.min.css">
+	<link rel="stylesheet" href="dist/vendor/select2/css/select2-foundation.css">
 	<link rel="stylesheet" href="dist/font/font.css">
 </head>
 
@@ -119,16 +121,16 @@
 				</div>
 				<div class="small-up-1 medium-up-2 large-up-4">
 					<div class="columns column-block">
-						<label class="text-center search-advance__label">نام دانشگاه
-						<select class="search-advance__select">
-							<option value="">دانشگاه تهران جنوب</option>
-							<option value="">دانشگاه اراک</option>
-							<option value="">دانشگاه اصفهان</option>
-							<option value="">دانشگاه تبریز</option>
-							<option value="">دانشگاه شیراز</option>
-							<option value="">دانشگاه مشهد</option>
+						<label class="text-center search-advance__label">نام دانشگاه</label>						
+						<select class="search-advance__select university-name" style="width: 100%">
+							<option></option>
+							<option value="0">دانشگاه تهران جنوب</option>
+							<option value="1">دانشگاه اراک</option>
+							<option value="2">دانشگاه اصفهان</option>
+							<option value="3">دانشگاه تبریز</option>
+							<option value="4">دانشگاه شیراز</option>
+							<option value="5">دانشگاه مشهد</option>
 						</select>
-					</label>
 					</div>
 					<div class="columns column-block">
 						<label class="text-center search-advance__label">نام دانشکده
@@ -467,5 +469,20 @@
 	</footer>
 </body>
 <script src="dist/app.bundle.js"></script>
+<script src="node_modules/foundation-sites/vendor/jquery/dist/jquery.min.js"></script>
+<script src="dist/vendor/select2/js/select2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".university-name").select2({			
+         placeholder: "نام دانشگاه را انتخاب کنید",
+         theme: "foundation", 
+		 language: {
+    		noResults: function (params) {
+    		  return "موردی یافت نشد";
+    		}
+  		}
+		});
+	});
+</script>
 
 </html>
