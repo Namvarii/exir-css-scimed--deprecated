@@ -47,6 +47,7 @@
       cursor: pointer;
       line-height: 1em;
       padding-left: 30px;
+      background-image: url(/dist/image/down-arrow.svg);
       @include breakpoint(large) {
          @include flex-grid-size(10%)
       }

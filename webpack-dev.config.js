@@ -29,10 +29,7 @@ module.exports = function() {
                      loader: 'style-loader'
                   },
                   {
-                     loader: 'css-loader',
-                     options: {
-                        sourceMap: true
-                     }
+                     loader: 'css-loader'
                   },
                   {
                      loader: 'postcss-loader',
@@ -51,6 +48,10 @@ module.exports = function() {
                      }
                   }
                ]
+            },
+            {
+               test: /\.(svg|png|jpg)$/,
+               use: 'url-loader'
             }
          ]
       },
