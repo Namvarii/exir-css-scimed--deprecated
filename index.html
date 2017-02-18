@@ -7,6 +7,7 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>بانک مقالات سامانه مدیریت داده‌های پژوهش و فناوری (سایمد)</title>
 	<script src="dist/vendor.bundle.js"></script>
+	<link rel="stylesheet" href="dist/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="dist/font/font.css">
 </head>
 
@@ -179,17 +180,18 @@
 				<a class="footer__link" data-open="submit-form">درخواست ثبت اطلاعات در سایمد</a>
 				<div class="reveal" data-reveal="submit-form">
 					<h4 class="reveal__title">ارسال اطلاعات</h4>
-					<form class="" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()" novalidate="novalidate">
+					<form class="feedback" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()" novalidate="novalidate">
 						<div class="">
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<i class="fa fa-user fa-book"></i>موضوع درخواست
+										<label class="middle">
+											<i class="fa fa-user fa-book"></i>  موضوع درخواست
+											<span class="reveal__validation-error">*</span>
 										</label>
-										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<select class="reveal__select" data-val="true" data-val-required="The RequestTopic field is required." id="RequestTopic"
 									    name="RequestTopic">
 									<option value="انتقاد">انتقاد</option>
@@ -200,181 +202,181 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle">
-											<i class="fa fa-user fa-university"></i>نام دانشگاه
-										</label>
-										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+										<label for="UniversityName" class="middle">
+											<i class="fa fa-user fa-university"></i> نام دانشگاه
+											<span class="reveal__validation-error">*</span>
+										</label>										
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" data-val="true" data-val-required="The UniversityName field is required." id="UniversityName" name="UniversityName"
 									    type="text" value="">
 									<span class="field-validation-valid" data-valmsg-for="UniversityName" data-valmsg-replace="false"> </span>
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle">
-											<i class="fa fa-user fa-graduation-cap"></i>رشته
-										</label>
-										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+										<label for="Field" class="middle">
+											<i class="fa fa-user fa-graduation-cap"></i> رشته
+											<span class="reveal__validation-error">*</span>
+										</label>										
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" data-val="true" data-val-required="The Field field is required." id="Field" name="Field" type="text" value="">
 									<span class="field-validation-valid" data-valmsg-for="Field" data-valmsg-replace="false"> </span>
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle">
-											<i class="fa fa-user fa-fw"></i>نام
-										</label>
-										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+										<label for="Name" class="middle">
+											<i class="fa fa-user fa-fw"></i> نام
+											<span class="reveal__validation-error">*</span>
+										</label>										
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" type="text" value="">
 									<span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="false"> </span>
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle">
-											<i class="fa fa-user fa-fw"></i>نام خانوادگی
-										</label>
-										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+										<label for="Family" class="middle">
+											<i class="fa fa-user fa-fw"></i> نام خانوادگی
+											<span class="reveal__validation-error">*</span>
+										</label>										
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" data-val="true" data-val-required="The Family field is required." id="Family" name="Family" type="text" value="">
 									<span class="field-validation-valid" data-valmsg-for="Family" data-valmsg-replace="false"> </span>
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle">
-											<i class="fa fa-barcode"></i>کد ملی
-										</label>
-										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+										<label for="NationalCode" class="middle">
+											<i class="fa fa-barcode"></i> کد ملی
+											<span class="reveal__validation-error">*</span>
+										</label>										
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" data-val="true" data-val-required="The NationalCode field is required." id="NationalCode" name="NationalCode" type="text"
 									    value="">
 									<span class="field-validation-valid" data-valmsg-for="NationalCode" data-valmsg-replace="false"> </span>
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle">
-											<i class="fa fa-mobile fa-fw"></i>موبایل
-										</label>
-										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+										<label for="Mobile" class="middle">
+											<i class="fa fa-mobile fa-fw"></i> موبایل
+											<span class="reveal__validation-error">*</span>
+										</label>										
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" data-val="true" data-val-required="The Mobile field is required." id="Mobile" name="Mobile" type="text" value="">
 									<span class="field-validation-valid" data-valmsg-for="Mobile" data-valmsg-replace="false"> </span>
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle">
-											<i class="fa fa-envelope fa-fw"></i>ایمیل
-										</label>
-										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
+										<label for="Email" class="middle">
+											<i class="fa fa-envelope fa-fw"></i> ایمیل
+											<span class="reveal__validation-error">*</span>
+										</label>										
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" data-val="true" data-val-required="The Email field is required." id="Email" name="Email" type="text" value="">
 									<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="false"> </span>
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle"><i class="fa fa-newspaper-o fa-fw"></i>
+										<label for="AuthorId" class="middle"><i class="fa fa-newspaper-o fa-fw"></i> 
 											Author ID
 										</label>
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" id="AuthorId" name="AuthorId" type="text" value="">
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle"><i class="fa fa-google fa-fw"></i>
+										<label for="GoogleScholarAddress" class="middle"><i class="fa fa-google fa-fw"></i> 
 											GoogleScholar Address
 										</label>
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" id="GoogleScholarAddress" name="GoogleScholarAddress" type="text" value="">
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle"><i class="fa fa-wpforms fa-fw"></i>
+										<label for="FaNickname" class="middle"><i class="fa fa-wpforms fa-fw"></i> 
 											نام متداول فارسی
 										</label>
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" id="FaNickname" name="FaNickname" type="text" value="">
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle"><i class="fa fa-wpforms fa-fw"></i>
+										<label for="EnNickname1" class="middle"><i class="fa fa-wpforms fa-fw"></i> 
 											نام متداول انگلیسی 1
 										</label>
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" id="EnNickname1" name="EnNickname1" type="text" value="">
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle"><i class="fa fa-wpforms fa-fw"></i>
+										<label for="EnNickname2" class="middle"><i class="fa fa-wpforms fa-fw"></i> 
 											نام متداول انگلیسی 2
 										</label>
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" id="EnNickname2" name="EnNickname2" type="text" value="">
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle"><i class="fa fa-wpforms fa-fw"></i>
+										<label for="EnNickname3" class="middle"><i class="fa fa-wpforms fa-fw"></i> 
 											نام متداول انگلیسی 3
 										</label>
 									</div>
 								</div>
-								<div class="small-12 medium-8 columns">
+								<div class="small-12 medium-7 columns">
 									<input class="reveal__input" id="EnNickname3" name="EnNickname3" type="text" value="">
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle"><i class="fa fa-bars fa-fw"></i>
+										<label for="" class="middle"><i class="fa fa-bars fa-fw"></i> 
 											شرح درخواست
 										</label>
 									</div>
@@ -386,9 +388,9 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="small-12 medium-4 columns">
+								<div class="small-12 medium-5 columns">
 									<div class="reveal__name">
-										<label for="right-label" class="middle"><i class="fa fa-file-archive-o"></i>
+										<label for="" class="middle"><i class="fa fa-file-archive-o"></i> 
 											حکم کارگزینی
 										</label>
 									</div>
@@ -402,6 +404,9 @@
 									<input type="submit" class="button" value="ارسال">
 								</div>
 							</div>
+							<button class="close-button" data-close aria-label="Close modal" type="button">
+								<span aria-hidden="true">&times;</span>
+							</button>
 						</div>
 					</form>
 				</div>
