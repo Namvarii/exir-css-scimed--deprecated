@@ -1,5 +1,6 @@
 .reveal {
     padding: 1rem 0;
+    top: 20px !important;
     &__title {
         border-bottom: 1px solid #ccc;
         font-size: 1.5rem;
@@ -8,14 +9,31 @@
         margin-bottom: 15px;
     }
     &__select {
+        border-radius: 4px;
         font-size: .9rem;
         font-weight: 600;
-        margin-bottom: .5rem;
+        padding-top: 0.37143rem;
+        margin-bottom: 0;
+        height: 2.28571rem;
     }
-    &reveal__input {
-        font-size: .9rem;
+    &__name {
         font-weight: 600;
     }
+    [type='text'] {
+        border-radius: 4px;
+        font-size: .9rem;
+        font-weight: 600;
+        margin-bottom: 0 !important;
+        height: 2.28571rem;
+    }
+    label.middle {
+        padding: 0.44286rem 0;
+        margin-bottom: 0 !important;
+    }
+}
+
+.feedback {
+    padding: 0 10px;
 }
 
 .close-button {

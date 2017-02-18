@@ -179,12 +179,13 @@
 				<a class="footer__link" data-open="submit-form">درخواست ثبت اطلاعات در سایمد</a>
 				<div class="reveal" data-reveal="submit-form">
 					<h4 class="reveal__title">ارسال اطلاعات</h4>
-					<form class="" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()" novalidate="novalidate">
+					<form class="feedback" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()" novalidate="novalidate">
 						<div class="">
 							<div class="row">
 								<div class="small-12 medium-4 columns">
 									<div class="reveal__name">
-										<i class="fa fa-user fa-book"></i>موضوع درخواست
+										<label for="right-label" class="middle">
+											<i class="fa fa-user fa-book"></i>موضوع درخواست
 										</label>
 										<sup><i class="fa fa-fw fa-asterisk"></i></sup>
 									</div>
@@ -402,6 +403,9 @@
 									<input type="submit" class="button" value="ارسال">
 								</div>
 							</div>
+							<button class="close-button" data-close aria-label="Close modal" type="button">
+								<span aria-hidden="true">&times;</span>
+							</button>
 						</div>
 					</form>
 				</div>
