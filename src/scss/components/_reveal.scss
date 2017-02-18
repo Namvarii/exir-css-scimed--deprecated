@@ -1,6 +1,8 @@
 .reveal {
     padding: 1rem 0;
-    top: 20px !important;
+    top: 0px !important;
+    margin: 20px auto;
+    
     &__title {
         border-bottom: 1px solid #ccc;
         font-size: 1.5rem;
@@ -19,12 +21,19 @@
     &__name {
         font-weight: 600;
     }
+    &__validation-error {
+        color: #cc4b37;
+        font-size: .8rem;
+    }
     [type='text'] {
         border-radius: 4px;
         font-size: .9rem;
         font-weight: 600;
         margin-bottom: 0 !important;
         height: 2.28571rem;
+    }
+    label {
+        color: map-get($color-palette, 'Tarawera')
     }
     label.middle {
         padding: 0.44286rem 0;
