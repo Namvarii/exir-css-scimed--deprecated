@@ -1,23 +1,24 @@
 .search-advance {
    background: map_get($color-palette, 'geyser');
-   padding: rem-calc(15px);
-   border-radius: 2px;
-   margin-top: 10px;
+   padding: $global-section-padding;
+   border-radius: $global-section-border;
+   margin-top: $global-section-margin;
 
    &__header {
-       font-weight: 500;
-       margin-bottom: 2rem;
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 2rem;
    }
 
    &__label {
-       font-family: Rezvan !important ;
-       font-size: 18px;
-       font-weight: 500;
+      font-family: Rezvan, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
    }
 
    &__select {
-       border-radius: 5px;
-       font-family: Vazir;
-       font-size: 14px;
+      border-radius: 5px;
+      font-family: Vazir, sans-serif;
+      font-size: 14px;
    }
 }

@@ -1,10 +1,12 @@
+@import '~foundation-sites/scss/util/unit';
 $color-palette: (
    steel-blue: #4b83bc,
    scooter: #35c5cb,
    iceberg: #e0f4f4,
    cold-purple: #9fabd9,
    jagged-ice: #b9e6e6,
-   geyser: #dbe3e6
+   geyser: #dbe3e6,
+   Tarawera: #0c3d5d
 );
 
 $body-font-family: Vazir, tahoma, sans-serif;
@@ -27,3 +29,7 @@ $header-styles: (
       'h6': ('font-size': 16),
    ),
 );
+$global-section-border: 4px;
+$global-section-padding: rem-calc(20 15 0);
+$global-section-margin: 10px;
+$global-image-margin: auto;

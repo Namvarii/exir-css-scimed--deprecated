@@ -1,0 +1,6 @@
+@import "~motion-ui/motion-ui.scss";
+
+.show-modal {
+   @include mui-fade(in, $delay: 200);
+   @include mui-slide(in, $direction: down, $amount: 10%)
+}

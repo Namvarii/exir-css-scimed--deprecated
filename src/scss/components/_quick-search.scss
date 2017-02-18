@@ -1,8 +1,13 @@
 .quick-search {
    background: map_get($color-palette, 'iceberg');
-   padding: rem-calc(15px);
-   border-radius: 3px;
-   @include breakpoint(885) {
+   padding: rem-calc(15);
+   border-radius: $global-section-border;
+   &:after {
+      content: '';
+      display: block;
+      clear: both;
+   }
+   @include breakpoint(large) {
       @include flex-grid-row(
          $wrap: false,
          $gutters: 0
@@ -10,7 +15,7 @@
    }
 
    &__column {
-      @include breakpoint(885) {
+      @include breakpoint(large) {
          margin: 0;
          @include flex-grid-column(expand, 15);
          min-height: rem-calc(50px);
@@ -19,9 +24,9 @@
    }
 
    &__title {
-      font-size: 14px;
-      @include breakpoint(885) {
-         font-size: 22px;
+      text-align: center;
+      @include breakpoint(large) {
+         text-align: right;
          @include flex-grid-size(3);
       }
    }
@@ -30,7 +35,9 @@
       border-color: $white;
       box-shadow: none;
       font-size: 14px;
-      border-radius: 0 9px 9px 0;
+      @include breakpoint(large) {
+         border-radius: rem-calc(0 9px 9px 0);
+      }
    }
 
    &__select {
@@ -38,7 +45,9 @@
       font-weight: 600;
       border-color: $white;
       cursor: pointer;
-      @include breakpoint(885) {
+      appearance: menulist-button;
+      line-height: 1em;
+      @include breakpoint(large) {
          @include flex-grid-size(10%)
       }
 
@@ -49,7 +58,9 @@
          border-color: $scooter;
 
          &:focus {
-            color: $black;
+            border-color: $scooter;
+            background: lighten($scooter, 10);
+            box-shadow: none;
          }
       }
    }
@@ -58,31 +69,50 @@
       font-family: Vazir, sans-serif;
       cursor: pointer;
       background: $white;
-      border-right: 2px solid $white;
+      border-right: rem-calc(2px) solid $white;
       display: inline-block;
-      padding: rem-calc(0 10px);
       text-align: center;
       font-weight: 600;
-      @include breakpoint(885) {
-         @include flex-grid-size(5%)
+      padding: rem-calc(10 15px);
+      min-width: rem-calc(80px);
+      height: rem-calc(40px);
+      float: left;
+      @include breakpoint(large) {
+         @include flex-grid-size(7%);
+         padding: rem-calc(0 15px);
       }
 
       &:focus {
          outline: none;
+         background-color: darken($white, 10);
       }
 
       &_color-cold-purple {
+         $color: map-get($color-palette, 'cold-purple');
          color: $white;
-         background-color: map-get($color-palette, 'cold-purple');
+         background-color: $color;
+         &:focus {
+            background-color: lighten($color, 10);
+         }
       }
 
       &_color-primary {
          color: $white;
          background-color: $primary-color;
+         &:focus {
+            background-color: lighten($primary-color, 10);
+         }
       }
 
       &_border-left-radius {
-         border-radius: 10px 0 0 10px;
+         @include breakpoint(large) {
+            border-radius: rem-calc(10px 0 0 10px);
+         }
       }
+   }
+
+   &__button-icon {
+      width: 30px;
+      max-height: 100%;
    }
 }

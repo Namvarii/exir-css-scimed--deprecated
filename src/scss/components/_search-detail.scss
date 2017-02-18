@@ -1,0 +1,30 @@
+.search-detail {
+   background: map_get($color-palette, 'jagged-ice');
+   padding: $global-section-padding;
+   border-radius: $global-section-border;
+   margin-top: $global-section-margin;
+
+   &__image {
+       margin: $global-image-margin;
+       margin-bottom: 10px;
+       width: auto;
+       height: 90px;
+   }
+
+   &__header {
+       font-weight: 500;
+       margin-bottom: 2rem;
+   }
+
+   &__label {
+       font-family: Rezvan !important ;
+       font-size: 18px;
+       font-weight: 500;
+   }
+
+   &__select {
+       border-radius: 5px;
+       font-family: Vazir;
+       font-size: 14px;
+   }
+}
