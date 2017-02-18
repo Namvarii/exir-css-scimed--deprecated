@@ -1,0 +1,61 @@
+.search-result {
+    &__head {
+        height: 25px;
+        line-height: 23px;
+        padding: 0 5px;
+        text-align: left;
+        border-top: 1px solid #6b6b6b;
+        border-bottom: 1px solid #6b6b6b;
+        position: relative;
+    }
+    &__head-background {
+        position: absolute;
+        right: 5px;
+        left: 5px;
+        top: 5px;
+        bottom: 5px;
+        background: map-get($color-palette, 'scooter');
+        z-index: 1;
+    }
+    &__title {
+        background-color: white;
+        color:  map-get($color-palette, 'Tarawera');
+        float: right;
+        font-size: 16px;
+        padding: 0px 3px;
+        margin-right: 20px;
+        position: relative;
+        z-index: 2;
+    }
+    &__body {
+        padding: 0 4px 4px;
+        overflow: hidden;
+    }
+    &__ibody {
+        padding: 0px 5px;
+    }
+    &__selected {
+        min-height: 16px;
+        margin-top: 5px;
+        text-align: right;
+        cursor: pointer;
+    }
+    &__body-icon-checkbox {
+        background: url('/dist/image/checkbox-filter-rtl.png') no-repeat scroll right 0 transparent;
+        padding-right: 20px;
+        padding-left: 0;
+        float: right;
+        min-height: 16px;
+    }
+    &__body-count {
+        color: #999;
+        font-size: 11px;
+    }
+    &__body-title {
+        text-align: right;
+        direction: rtl;
+    }
+    [type='file'], [type='checkbox'], [type='radio'] {
+        margin: 0;
+    }
+}
