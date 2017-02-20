@@ -6,7 +6,8 @@ $color-palette: (
    cold-purple: #9fabd9,
    jagged-ice: #b9e6e6,
    geyser: #dbe3e6,
-   Tarawera: #0c3d5d
+   Tarawera: #0c3d5d,
+   Endeavour: #004f9f
 );
 
 $body-font-family: 'IRANSans', Vazir, tahoma, sans-serif;
@@ -33,3 +34,5 @@ $global-section-border: 4px;
 $global-section-padding: rem-calc(20 15 0);
 $global-section-margin: 10px;
 $global-image-margin: auto;
+$global-nopadding-right: 0;
+$global-nopadding-left: 0;

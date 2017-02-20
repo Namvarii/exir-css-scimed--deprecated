@@ -17,15 +17,6 @@ module.exports = function() {
       module: {
          rules: [
             {
-               test: /\.(woff|woff2|ttf|eot)$/,
-               use: {
-                  loader: 'url-loader',
-                  options: {
-                     limit: '10000'
-                  }
-               }
-            },
-            {
                test: /\.js(x)?$/,
                exclude: /node_modules/,
                use: 'babel-loader'
@@ -38,10 +29,7 @@ module.exports = function() {
                      loader: 'style-loader'
                   },
                   {
-                     loader: 'css-loader',
-                     options: {
-                        sourceMap: true
-                     }
+                     loader: 'css-loader'
                   },
                   {
                      loader: 'postcss-loader',
@@ -60,6 +48,10 @@ module.exports = function() {
                      }
                   }
                ]
+            },
+            {
+               test: /\.(svg|png|jpg)$/,
+               use: 'url-loader'
             }
          ]
       },

@@ -92,4 +92,72 @@
     .pagination-previous a::before, .pagination-previous.disabled::before {
         margin-left: 0.3rem;
     }
+    &__content {
+        margin-bottom: 1rem;
+    }
+    &__result{
+        padding-right: $global-nopadding-right;
+        line-height: 2;
+
+        &-title {
+            font-size: 16px;
+            font-weight: 500;
+            &-link {
+                color: #111;
+                &:hover {
+                    color: map_get($color-palette, 'Endeavour');
+                }
+            }
+        }
+        &-information {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &-metadata {
+            border: 1px solid #B8B8B8;
+            color: #737373;
+            padding: 0.3rem 0.8rem 0;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            &-features {
+                text-align: right;
+                right: 10px;
+                float: right;
+                &-title {
+                    margin-left: .5rem;
+                }
+                &-link {
+                    color: #222;
+                    font-size: 16px;
+                    vertical-align: sub;
+                    &:hover {
+                        color: map_get($color-palette, 'Endeavour');
+                    }
+                }
+            }
+        }
+        &-export {
+            margin-right: 10rem;
+            &-icon-endnote {
+                background: url('/dist/image/endnote-icon.png');
+                display: block;
+                height: 16px;
+                margin-top: 4px;
+                margin-left: .5rem;
+                width: 53px;
+                float: right;
+            }
+            &-icon-share {
+                color: map_get($color-palette, 'scooter');
+                &:hover {
+                    color: map_get($color-palette, 'Endeavour');
+                }
+            }
+        }
+    }
 }
