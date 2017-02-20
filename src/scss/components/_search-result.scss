@@ -93,24 +93,24 @@
         margin-left: 0.3rem;
     }
     &__content {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     &__result{
         padding-right: $global-nopadding-right;
         line-height: 2;
 
         &-title {
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 20px;
+            font-weight: 600;
             &-link {
-                color: #111;
+                color: map_get($color-palette, 'Endeavour');
                 &:hover {
-                    color: map_get($color-palette, 'Endeavour');
+                    color: map_get($color-palette, 'Denim');
                 }
             }
         }
         &-information {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
             margin-bottom: 10px;
         }
@@ -159,6 +159,15 @@
                     color: map_get($color-palette, 'Endeavour');
                 }
             }
+        }
+    }
+    &__abstract {
+        &-show {
+            background-color: #F3F3F3;
+            border: 1px solid #b8b8b8;
+            color: #737373;
+            padding: .3rem .5rem;
+            margin-top: .3rem;
         }
     }
 }
