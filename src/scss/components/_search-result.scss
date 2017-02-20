@@ -50,6 +50,8 @@
     &__body-count {
         color: #999;
         font-size: 11px;
+        direction: ltr;
+        float: left;
     }
     &__body-title {
         text-align: right;
@@ -57,5 +59,37 @@
     }
     [type='file'], [type='checkbox'], [type='radio'] {
         margin: 0;
+    }
+    [type='checkbox'] + label, [type='radio'] + label {
+        margin-right: 0.27143rem;
+        margin-left: 0.14286rem;
+    }
+
+    .quick-search {
+        background: #35c5cb;
+        color: #fff;
+    }
+
+    &__show {
+        margin-top: 20px;
+    }
+    .pagination {
+        background: map_get($color-palette, 'iceberg');
+        border-radius: 4px;
+        padding: .5rem;
+    }
+    .pagination .current {
+        border-radius: 4px;
+    }
+    .pagination a:hover, .pagination button:hover {
+        background: map_get($color-palette, 'scooter');
+        border-radius: 4px;
+        color: #fff;
+    }
+    .pagination-next a::after, .pagination-next.disabled::after {
+        margin-right: 0;
+    }
+    .pagination-previous a::before, .pagination-previous.disabled::before {
+        margin-left: 0.3rem;
     }
 }
