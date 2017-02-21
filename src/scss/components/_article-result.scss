@@ -1,7 +1,7 @@
 .article-result {
     &__journalinfo {
         border-bottom: 1px solid #c7c7c7;
-        padding-bottom: .7rem;
+        padding: 0 .5rem .7rem;
         margin-bottom: 1rem;
         &-link {
         font-size: 20px;
@@ -14,8 +14,8 @@
         }
     }
     &__article {
-        border-bottom: 1px solid #c7c7c7;
-        padding-bottom: .7rem;
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
         margin-bottom: 1rem;
         &-title {
             font-size: 20px;
@@ -30,12 +30,21 @@
                 &:hover {
                     color: map_get($color-palette, 'scooter');
                 }
+                &:after {
+                    content: "، ";
+                    margin-right: .1rem;
+                    margin-left: .2rem;
+                }
+                &:last-child:after {
+                    content: "";
+                    margin: 0;
+                }
             }
         }
     }
     &__features {
-        border-bottom: 1px solid #c7c7c7;
-        padding-bottom: .7rem;
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
         margin-bottom: 1rem;
         &-title {
             font-size: 18px;
@@ -53,7 +62,8 @@
         }
     }
     &__abstract {
-        padding-bottom: .7rem;
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
         margin-bottom: 1rem;
         &-title {
             font-size: 18px;
@@ -64,6 +74,36 @@
             color: #737373;
             font-size: 16px;
             line-height: 2;
+            margin: 0 1rem 0 .5rem;
+        }
+    }
+    &__keyword {
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+        &-list {
+            font-size: 16px;
+            &-link {
+                color: map_get($color-palette, 'Endeavour');
+                font-weight: 600;
+                &:hover {
+                    color: map_get($color-palette, 'scooter');
+                }
+                &:after {
+                    content: "، ";
+                    margin-right: .1rem;
+                    margin-left: .2rem;
+                }
+                &:last-child:after {
+                    content: "";
+                    margin: 0;
+                }
+            }
         }
     }
 }
