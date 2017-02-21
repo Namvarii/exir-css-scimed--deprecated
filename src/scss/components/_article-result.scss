@@ -135,4 +135,47 @@
             }
         }
     }
+    &__relatedArticles {
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+        &-list {
+            font-size: 16px;
+            &-link {
+                color: map_get($color-palette, 'Endeavour');
+                font-weight: 600;
+                &:hover {
+                    color: map_get($color-palette, 'scooter');
+                }
+                &:after {
+                    content: "، ";
+                    margin-right: .1rem;
+                    margin-left: .2rem;
+                }
+                &:last-child:after {
+                    content: "";
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__articlesDetail {       
+        padding: 0 .5rem;
+        &-list {
+            &-title {
+                font-size: 17px;
+                font-weight: 500;
+            }
+            &-detail {
+                color: #555;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
 }
