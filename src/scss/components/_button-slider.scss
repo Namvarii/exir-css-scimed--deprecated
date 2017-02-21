@@ -1,0 +1,61 @@
+.button-slider {
+   overflow: hidden;
+   padding: 0;
+   position: relative;
+
+   @keyframes slide {
+      0% {
+         top: 0;
+      }
+      25% {
+         top: 100%;
+      }
+      50% {
+         top: 100%;
+      }
+      75% {
+         top: 100%;
+      }
+      100% {
+         top: 0
+      }
+   }
+
+   &__item {
+      animation-name: slide;
+      animation-duration: 1.2s;
+      animation-timing-function: linear;
+      animation-delay: 1s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      transform: translateY(-100%);
+      transition: transform 0.4s;
+      overflow: hidden;
+      display: block;
+      border: none;
+      background-color: transparent !important;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      color: inherit;
+      font: inherit;
+      cursor: pointer !important;
+      box-shadow: none;
+
+      &:focus {
+         transition: transform 0.4s;
+         box-shadow: none;
+         border: none;
+      }
+
+      &.selected {
+         transform: translateY(0)
+      }
+   }
+}

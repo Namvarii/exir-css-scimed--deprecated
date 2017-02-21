@@ -45,21 +45,22 @@
       font-weight: 600;
       border-color: $white;
       cursor: pointer;
-      appearance: menulist-button;
       line-height: 1em;
+      padding-left: 30px;
+      background-image: url(/dist/image/down-arrow.svg);
       @include breakpoint(large) {
          @include flex-grid-size(10%)
       }
 
       &_color-scooter {
          $scooter: map-get($color-palette, 'scooter');
-         background: $scooter;
+         background-color: $scooter;
          color: $white;
          border-color: $scooter;
 
          &:focus {
             border-color: $scooter;
-            background: lighten($scooter, 10);
+            background-color: lighten($scooter, 10);
             box-shadow: none;
          }
       }
@@ -76,8 +77,11 @@
       padding: rem-calc(10 15px);
       min-width: rem-calc(80px);
       height: rem-calc(40px);
+      line-height: rem-calc(40px);
       float: left;
+      padding: rem-calc(0);
       @include breakpoint(large) {
+         line-height: rem-calc(50px);
          @include flex-grid-size(7%);
          padding: rem-calc(0 15px);
       }
