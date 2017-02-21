@@ -4,9 +4,13 @@
         padding: 0 .5rem .7rem;
         margin-bottom: 1rem;
         &-link {
+        color: map_get($color-palette, 'Endeavour');
         font-size: 20px;
         font-weight: 500;
         margin-bottom: .5rem;
+            &:hover {
+                color: map_get($color-palette, 'scooter');
+            }
         }
         &-descrption {
             color: #777;
@@ -53,10 +57,10 @@
         }
         &-info {
             &-link {
-                color: #222;
+                color: map_get($color-palette, 'Endeavour');
                 font-weight: 600;
                 &:hover {
-                    color: map_get($color-palette, 'Endeavour');
+                    color: map_get($color-palette, 'scooter');
                 }
             }
         }
