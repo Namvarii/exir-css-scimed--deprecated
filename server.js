@@ -4,7 +4,7 @@ browserSync(
 		{
 			server: {
 				baseDir: "./",
-				index  : "article-result.html"
+				index  : "author-detail.html"
 			},
 			files: ['./dist/*.js', '*.html']
 		}

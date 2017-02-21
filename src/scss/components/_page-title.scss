@@ -3,6 +3,12 @@
     padding: 1.42857rem 1.07143rem 0.62857rem;
     border-radius: $global-section-border;
     margin-bottom: $global-section-margin;
+    &__header {
+        &-authorname {
+            color: #333;
+            font-size: 15px;
+        }
+    }
     &__menu {
         &-link {        
             color: #111;
