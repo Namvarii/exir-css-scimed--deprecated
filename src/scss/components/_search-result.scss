@@ -1,0 +1,173 @@
+.search-result {
+    &__head {
+        height: 25px;
+        line-height: 23px;
+        padding: 0 5px;
+        text-align: left;
+        border-top: 1px solid #6b6b6b;
+        border-bottom: 1px solid #6b6b6b;
+        position: relative;
+    }
+    &__head-background {
+        position: absolute;
+        right: 5px;
+        left: 5px;
+        top: 5px;
+        bottom: 5px;
+        background: map-get($color-palette, 'scooter');
+        z-index: 1;
+    }
+    &__title {
+        background-color: white;
+        color:  map-get($color-palette, 'Tarawera');
+        float: right;
+        font-size: 16px;
+        padding: 0px 3px;
+        margin-right: 20px;
+        position: relative;
+        z-index: 2;
+    }
+    &__body {
+        padding: 0 4px 4px;
+        overflow: hidden;
+    }
+    &__ibody {
+        padding: 0px 5px;
+    }
+    &__selected {
+        min-height: 16px;
+        margin-top: 5px;
+        text-align: right;
+        cursor: pointer;
+    }
+    &__body-icon-checkbox {
+        background: url('/dist/image/checkbox-filter-rtl.png') no-repeat scroll right 0 transparent;
+        padding-right: 20px;
+        padding-left: 0;
+        float: right;
+        min-height: 16px;
+    }
+    &__body-count {
+        color: #999;
+        font-size: 11px;
+        direction: ltr;
+        float: left;
+    }
+    &__body-title {
+        text-align: right;
+        direction: rtl;
+    }
+    [type='file'], [type='checkbox'], [type='radio'] {
+        margin: 0;
+    }
+    [type='checkbox'] + label, [type='radio'] + label {
+        margin-right: 0.27143rem;
+        margin-left: 0.14286rem;
+    }
+
+    .quick-search {
+        background: #35c5cb;
+        color: #fff;
+    }
+
+    &__show {
+        margin-top: 20px;
+    }
+    .pagination {
+        background: map_get($color-palette, 'iceberg');
+        border-radius: 4px;
+        padding: .5rem;
+    }
+    .pagination .current {
+        border-radius: 4px;
+    }
+    .pagination a:hover, .pagination button:hover {
+        background: map_get($color-palette, 'scooter');
+        border-radius: 4px;
+        color: #fff;
+    }
+    .pagination-next a::after, .pagination-next.disabled::after {
+        margin-right: 0;
+    }
+    .pagination-previous a::before, .pagination-previous.disabled::before {
+        margin-left: 0.3rem;
+    }
+    &__content {
+        margin-bottom: 2rem;
+    }
+    &__result{
+        padding-right: $global-nopadding-right;
+        line-height: 2;
+
+        &-title {
+            font-size: 20px;
+            font-weight: 600;
+            &-link {
+                color: map_get($color-palette, 'Endeavour');
+                &:hover {
+                    color: map_get($color-palette, 'Denim');
+                }
+            }
+        }
+        &-information {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &-metadata {
+            border: 1px solid #B8B8B8;
+            color: #737373;
+            padding: 0.3rem 0.8rem 0;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            &-features {
+                text-align: right;
+                right: 10px;
+                float: right;
+                &-title {
+                    margin-left: .5rem;
+                }
+                &-link {
+                    color: #222;
+                    font-size: 16px;
+                    vertical-align: sub;
+                    &:hover {
+                        color: map_get($color-palette, 'Endeavour');
+                    }
+                }
+            }
+        }
+        &-export {
+            margin-right: 10rem;
+            &-icon-endnote {
+                background: url('/dist/image/endnote-icon.png');
+                display: block;
+                height: 16px;
+                margin-top: 4px;
+                margin-left: .5rem;
+                width: 53px;
+                float: right;
+            }
+            &-icon-share {
+                color: map_get($color-palette, 'scooter');
+                &:hover {
+                    color: map_get($color-palette, 'Endeavour');
+                }
+            }
+        }
+    }
+    &__abstract {
+        &-show {
+            background-color: #F3F3F3;
+            border: 1px solid #b8b8b8;
+            color: #737373;
+            padding: .3rem .5rem;
+            margin-top: .3rem;
+        }
+    }
+}

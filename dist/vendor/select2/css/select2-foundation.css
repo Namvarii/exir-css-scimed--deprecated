@@ -234,9 +234,9 @@ span.select2-container--foundation .selection {
 
 .select2-container--foundation .select2-selection--single,
 .select2-container--foundation .selection .select2-selection--single {
-	height: 2.6375rem;
+	height: 2.78571rem;
 	line-height: 1.5;
-	padding: 0.5rem;
+	padding: 0.57143rem;
 }
 
 .select2-container--foundation .select2-selection--single .select2-selection__rendered,
@@ -249,8 +249,9 @@ span.select2-container--foundation .selection {
 	height: 2.78571rem;
 	position: absolute;
 	top: 0;
+	right: auto;
 	left: 4px;
-	width: 20px;
+	width: 20px;	
 }
 
 .select2-container--foundation .select2-selection--single .select2-selection__arrow b,

@@ -1,0 +1,185 @@
+.article-result {
+    &__journalinfo {
+        border-bottom: 1px solid #c7c7c7;
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-link {
+        color: map_get($color-palette, 'Endeavour');
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: .5rem;
+            &:hover {
+                color: map_get($color-palette, 'scooter');
+            }
+        }
+        &-descrption {
+            color: #777;
+            font-size: 15px;
+        }
+    }
+    &__article {
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+        &-authors {
+            font-size: 15px;
+            &-name {
+                color: map_get($color-palette, 'Endeavour');
+                font-weight: 600;
+                &:hover {
+                    color: map_get($color-palette, 'scooter');
+                }
+                &:after {
+                    content: "، ";
+                    margin-right: .1rem;
+                    margin-left: .2rem;
+                }
+                &:last-child:after {
+                    content: "";
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__features {
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+        &-info {
+            &-link {
+                color: map_get($color-palette, 'Endeavour');
+                font-weight: 600;
+                &:hover {
+                    color: map_get($color-palette, 'scooter');
+                }
+            }
+        }
+    }
+    &__abstract {
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+        &-text {
+            color: #737373;
+            font-size: 16px;
+            line-height: 2;
+            margin: 0 1rem 0 .5rem;
+        }
+    }
+    &__keyword {
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+        &-list {
+            font-size: 16px;
+            &-link {
+                color: map_get($color-palette, 'Endeavour');
+                font-weight: 600;
+                &:hover {
+                    color: map_get($color-palette, 'scooter');
+                }
+                &:after {
+                    content: "، ";
+                    margin-right: .1rem;
+                    margin-left: .2rem;
+                }
+                &:last-child:after {
+                    content: "";
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__publish {
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+        &-list {
+            font-size: 16px;
+            &-link {
+                color: map_get($color-palette, 'Endeavour');
+                font-weight: 600;
+                &:hover {
+                    color: map_get($color-palette, 'scooter');
+                }
+                &:after {
+                    content: "، ";
+                    margin-right: .1rem;
+                    margin-left: .2rem;
+                }
+                &:last-child:after {
+                    content: "";
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__relatedArticles {
+        border-bottom: 1px solid #c7c7c7;        
+        padding: 0 .5rem .7rem;
+        margin-bottom: 1rem;
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+        &-list {
+            font-size: 16px;
+            &-link {
+                color: map_get($color-palette, 'Endeavour');
+                font-weight: 600;
+                &:hover {
+                    color: map_get($color-palette, 'scooter');
+                }
+                &:after {
+                    content: "، ";
+                    margin-right: .1rem;
+                    margin-left: .2rem;
+                }
+                &:last-child:after {
+                    content: "";
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__articlesDetail {       
+        padding: 0 .5rem;
+        &-list {
+            &-title {
+                font-size: 17px;
+                font-weight: 500;
+            }
+            &-detail {
+                color: #555;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}

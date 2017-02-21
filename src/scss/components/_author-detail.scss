@@ -1,0 +1,95 @@
+.author-result {
+    &__personaldetail {
+        background-color: rgba(53, 197, 203, .5);
+        padding: 1.42857rem 1.07143rem 1.12857rem;
+        margin-bottom: 15px;
+        &-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &-table {
+            border-spacing: .1rem;
+            &-row {
+                background-color: map_get($color-palette, 'iceberg') !important;
+                font-size: 15px;
+                &>td {
+                    padding: 0.71429rem;
+                }
+                &-header {
+                    color: map_get($color-palette, 'sherpa-blue');
+                    font-size: 16px;
+                    font-weight: 500;
+                    width: 30%;
+                }
+                &-name {
+                    font-weight: 500;
+                }
+                &-detail {
+                    color: map_get($color-palette, 'Tarawera');
+                    font-weight: 500;
+                    &:hover {
+                        color: map_get($color-palette, 'Denim');
+                    }
+                }
+            }
+        }
+    }
+    &__researchdetail {
+        background-color: rgba(53, 197, 203, .5);
+        padding: 1.42857rem 1.07143rem 1.12857rem;
+        margin-bottom: 15px;
+        &-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &-table {
+            border-spacing: .1rem;
+            &-row {
+                background-color: map_get($color-palette, 'iceberg') !important;
+                font-size: 15px;
+                &>td {
+                    padding: 0.71429rem;
+                }
+                &-header {
+                    color: map_get($color-palette, 'sherpa-blue');
+                    font-size: 16px;
+                    font-weight: 500;
+                    width: 30%;
+                }
+                &-name {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    &__articledetail {
+        background-color: rgba(53, 197, 203, .5);
+        padding: 1.42857rem 1.07143rem 1.12857rem;
+        &-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &-table {
+            border-spacing: .1rem;
+            &-row {
+                background-color: map_get($color-palette, 'iceberg') !important;
+                font-size: 15px;
+                &>td {
+                    padding: 0.71429rem;
+                }
+                &-header {
+                    color: map_get($color-palette, 'sherpa-blue');
+                    font-size: 16px;
+                    font-weight: 500;
+                    width: 30%;
+                }
+                &-name {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
