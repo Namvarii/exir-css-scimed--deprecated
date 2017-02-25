@@ -1,52 +1,54 @@
 .reveal {
-    padding: 1rem 0;
-    top: 0px !important;
-    margin: 20px auto;
-    
-    &__title {
-        border-bottom: 1px solid #ccc;
-        font-size: 1.5rem;
-        font-weight: 600;
-        padding: 0 1rem 1rem;
-        margin-bottom: 15px;
-    }
-    &__select {
-        border-radius: 4px;
-        font-size: .9rem;
-        font-weight: 600;
-        padding-top: 0.37143rem;
-        margin-bottom: 0;
-        height: 2.28571rem;
-    }
-    &__name {
-        font-weight: 600;
-    }
-    &__validation-error {
-        color: #cc4b37;
-        font-size: .8rem;
-    }
-    [type='text'] {
-        border-radius: 4px;
-        font-size: .9rem;
-        font-weight: 600;
-        margin-bottom: 0 !important;
-        height: 2.28571rem;
-    }
-    label {
-        color: map-get($color-palette, 'Tarawera')
-    }
-    label.middle {
-        padding: 0.44286rem 0;
-        margin-bottom: 0 !important;
-    }
-}
+   padding: 1rem 0;
+   top: 0px !important;
+   margin: 20px auto;
 
-.feedback {
-    padding: 0 10px;
-}
+   &__title {
+      border-bottom: 1px solid #ccc;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 0 1rem 1rem;
+      margin-bottom: 15px;
+   }
+   &__select {
+      border-radius: 4px;
+      font-size: .9rem;
+      font-weight: 600;
+      padding-top: 0.37143rem;
+      margin-bottom: 0;
+      height: 2.28571rem;
+   }
+   &__name {
+      font-weight: 600;
+   }
+   &__validation-error {
+      color: #cc4b37;
+      font-size: .8rem;
+   }
+   [type='text'] {
+      border-radius: 4px;
+      font-size: .9rem;
+      font-weight: 600;
+      margin-bottom: 0 !important;
+      height: 2.28571rem;
+   }
+   label {
+      color: map-get($color-palette, 'Tarawera')
+   }
+   label.middle {
+      padding: 0.44286rem 0;
+      margin-bottom: 0 !important;
+   }
 
-.close-button {
-    top: .85rem;
-    right: auto;
-    left: 1rem;
+   &__close-button {
+      @if $global-text-direction == 'ltr' {
+         right: 10px;
+      } @else {
+         left: 10px;
+      }
+   }
+
+   &__form {
+      padding: 0 10px;
+   }
 }

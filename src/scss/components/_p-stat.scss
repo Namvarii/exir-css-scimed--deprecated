@@ -23,9 +23,13 @@
          padding: rem-calc(5 10);
 
          &:first-child {
-            text-align: left;
+            text-align: if($global-text-direction == 'ltr', right, left);;
             font-weight: 400;
-            padding-right: rem-calc(15);
+            @if $global-text-direction == 'ltr' {
+               padding-left: rem-calc(15);
+            } @else {
+               padding-right: rem-calc(15);
+            }
          }
 
          &:last-child {
@@ -40,7 +44,7 @@
       @include breakpoint(770) {
          display: block;
          width: 110px;
-         float: left;
+         float: if($global-text-direction == 'ltr', right, left);
          margin: 12px 0;
       }
    }

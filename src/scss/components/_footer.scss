@@ -5,12 +5,12 @@
    padding: rem-calc(20px 30px 30px);
    margin-top: 40px;
 
-    tbody {
-        th,
-        td {
-            padding: 0;
-        }
-    }
+   tbody {
+      th,
+      td {
+         padding: 0;
+      }
+   }
 
    &__header {
       color: $primary-color;
@@ -28,9 +28,10 @@
    }
 
    &__table {
-      text-align: right;
+      $align: if($global-text-direction == 'ltr', left, right);
+      text-align: $align;
       th, td {
-         text-align: right;
+         text-align: $align;
          padding: 0;
       }
    }
@@ -44,5 +45,9 @@
          outline: none;
          color: darken($color, 10);
       }
+   }
+
+   &__submit {
+      float: if($global-text-direction == 'ltr', right, left);
    }
 }

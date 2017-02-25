@@ -8,7 +8,8 @@ module.exports = function() {
    return {
       entry: {
          app: path.resolve( __dirname, 'src', 'js', 'app.js' ),
-         vendor: path.resolve( __dirname, 'src', 'js', 'vendor.js' )
+         vendor: path.resolve( __dirname, 'src', 'js', 'vendor.js' ),
+         vendor_ltr: path.resolve( __dirname, 'src', 'js', 'vendor-ltr.js' )
       },
       output: {
          filename: '[name].bundle.js',
@@ -29,7 +30,10 @@ module.exports = function() {
                      loader: 'style-loader'
                   },
                   {
-                     loader: 'css-loader'
+                     loader: 'css-loader',
+                     options: {
+                        sourceMap: false
+                     }
                   },
                   {
                      loader: 'postcss-loader',

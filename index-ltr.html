@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--suppress HtmlFormInputWithoutLabel -->
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>بانک مقالات سامانه مدیریت داده‌های پژوهش و فناوری (سایمد)</title>
+	<script src="dist/vendor_ltr.bundle.js"></script>
+	<link rel="stylesheet" href="dist/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="dist/font/font.css">
+</head>
+<body>
+	<header class="header">
+		<div class="row">
+			<div class="medium-6 columns">
+				<div class="header__logo">
+					<img src="dist/image/logo.png" alt="بانک مقالات ">
+				</div>
+			</div>
+			<div class="medium-6 columns">
+				<table class="p-stat-table header__p-stat-table">
+					<tbody>
+						<tr>
+							<th>تعداد کل مقالات</th>
+							<td>34567</td>
+						</tr>
+						<tr>
+							<th>تعداد مقالات فارسی</th>
+							<td>2634</td>
+						</tr>
+						<tr>
+							<th>تعداد مقالات انگلیسی</th>
+							<td>12</td>
+						</tr>
+						<tr>
+							<th>تعداد نویسندگان</th>
+							<td>983</td>
+						</tr>
+						<tr>
+							<th>تعداد نشریات</th>
+							<td>112</td>
+						</tr>
+					</tbody>
+				</table>
+				<img src="dist/image/bar-chart.svg" class="p-stat-table__image">
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<span>En</span> /
+				<a href="index.html">فارسی</a>
+			</div>
+		</div>
+	</header>
+	<main class="search">
+		<section class="quick-search">
+			<h1 class="quick-search__title quick-search__column">جستجوی سریع مقاله</h1>
+			<input type="text" title="quick search" placeholder="کلید واژه بر اساس فیلد مورد نظر" class="quick-search__input quick-search__column"
+			/>
+			<select class="quick-search__select quick-search__column quick-search__select_color-scooter" title="Article Title">
+				<option value="">عنوان مقاله</option>
+			</select>
+			<button type="button" class="button-slider quick-search__button quick-search__column quick-search__button_color-cold-purple">
+			<span class="button-slider__item selected">فارسی</span>
+			<span class="button-slider__item">EN</span>
+		</button>
+			<button type="button" class="quick-search__button quick-search__column quick-search__button_color-primary quick-search__button_border-side-radius">
+				<img src="dist/image/magnifier-icon.svg" alt="search" class="quick-search__button-icon">
+			</button>
+		</section>
+		<section id="search-detail">
+			<div class="row search-detail">
+				<div class="large-12 columns">
+					<h3 class="text-center search-detail__header">تعیین جزئیات برای جستجو</h3>
+				</div>
+				<div class="small-up-1 medium-up-2 large-up-5">
+					<div class="columns column-black text-center">
+						<img src="dist/image/calendar.svg" class="search-detail__image" alt="تاریخ">
+						<div class="row small-up-2 medium-up-2 large-up-2 collapse">
+							<div class="columns column-block">
+								<select class="search-detail__select">
+								<option value="">از تاریخ</option>
+							</select>
+							</div>
+							<div class="columns column-block">
+								<select class="search-detail__select">
+								<option value="">تا تاریخ</option>
+							</select>
+							</div>
+						</div>
+					</div>
+					<div class="columns column-black text-center">
+						<img src="dist/image/file-pile.svg" class="search-detail__image" alt="همه انواع">
+						<select class="search-detail__select">
+						<option value="">همه انواع</option>
+					</select>
+					</div>
+					<div class="columns column-black text-center">
+						<img src="dist/image/computer-user.svg" class="search-detail__image" alt="همه نویسندگان">
+						<select class="search-detail__select">
+						<option value="">همه نویسندگان</option>
+					</select>
+					</div>
+					<div class="columns column-black text-center">
+						<img src="dist/image/book.svg" class="search-detail__image" alt="همه نشریات">
+						<select class="search-detail__select">
+						<option value="">همه نشریات</option>
+					</select>
+					</div>
+					<div class="columns column-black text-center medium-centered">
+						<img src="dist/image/question.svg" class="search-detail__image" alt="همه منابع">
+						<select class="search-detail__select">
+						<option value="">همه منابع</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="search-advance">
+		<div class="row search-advance">
+			<div class="large-12 columns">
+				<h3 class="text-center search-advance__header">محدود کردن نتایج جستجو بر اساس افیلیشن</h3>
+			</div>
+			<div class="small-up-1 medium-up-2 large-up-4">
+				<div class="columns column-block">
+					<label class="text-center search-advance__label">نام دانشگاه</label>
+						<select class="search-advance__select university-name" style="width: 100%">
+							<option></option>
+							<option value="0">دانشگاه تهران جنوب</option>
+							<option value="1">دانشگاه اراک</option>
+							<option value="2">دانشگاه اصفهان</option>
+							<option value="3">دانشگاه تبریز</option>
+							<option value="4">دانشگاه شیراز</option>
+							<option value="5">دانشگاه مشهد</option>
+						</select>
+					</div>
+					<div class="columns column-block">
+						<label class="text-center search-advance__label">نام دانشکده
+						<select class="search-advance__select">
+							<option value="">دانشکده فنی مهندسی</option>
+							<option value="">دانشکده پزشکی</option>
+							<option value="">دانشکده علوم انسانی</option>
+						</select>
+					</label>
+					</div>
+					<div class="columns column-block">
+						<label class="text-center search-advance__label">نام مرکز تحقیقاتی
+						<select class="search-advance__select">
+							<option value="">مرکز تحقیقاتی بهار</option>
+							<option value="">مرکز تحقیقاتی اراک</option>
+							<option value="">مرکز تحقیقاتی اصفهان</option>
+							<option value="">مرکز تحقیقاتی تبریز</option>
+							<option value="">مرکز تحقیقاتی شیراز</option>
+							<option value="">مرکز تحقیقاتی مشهد</option>
+						</select>
+					</label>
+					</div>
+					<div class="columns column-block">
+						<label class="text-center search-advance__label">نام گروه
+						<select class="search-advance__select">
+							<option value="">گروه تهران</option>
+							<option value="">گروه اراک</option>
+							<option value="">گروه اصفهان</option>
+							<option value="">گروه تبریز</option>
+							<option value="">گروه شیراز</option>
+							<option value="">گروه مشهد</option>
+						</select>
+					</label>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="row small-up-1 medium-up-2 large-up-4">
+			<div class="columns column-block">
+				<h3 class="footer__header">
+					ارسال نظرات، درخواست تصحیح اطلاعات
+				</h3>
+				<p class="footer__body">
+					لطفا نظرات، پیشنهادات و انتقادات خود را در خصوص این سامانه و یا زیر سامانه‌های مرتبط از طریق پر نمودن فرم زیر به ما اعلام
+					نمایید.
+				</p>
+				<a class="footer__link" data-open="submit-form">درخواست ثبت اطلاعات در سایمد</a>
+				<div class="reveal" data-reveal="submit-form">
+					<h4 class="reveal__title">ارسال اطلاعات</h4>
+					<form class="reveal__form" enctype="multipart/form-data" id="FeedBackForm" method="post" onsubmit="getResult()" novalidate="novalidate">
+						<div class="">
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label class="middle">
+											<i class="fa fa-user fa-book"></i>  موضوع درخواست
+											<span class="reveal__validation-error">*</span>
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<select class="reveal__select" data-val="true" data-val-required="The RequestTopic field is required." id="RequestTopic"
+									    name="RequestTopic">
+									<option value="انتقاد">انتقاد</option>
+									<option value="پیشنهاد">پیشنهاد</option>
+									<option selected="selected" value="نام من در سایمد نیست">نام من در سایمد نیست</option>
+									<option value="سایر">سایر</option>
+								</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="UniversityName" class="middle">
+											<i class="fa fa-user fa-university"></i> نام دانشگاه
+											<span class="reveal__validation-error">*</span>
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" data-val="true" data-val-required="The UniversityName field is required." id="UniversityName" name="UniversityName"
+									    type="text" value="">
+									<span class="field-validation-valid" data-valmsg-for="UniversityName" data-valmsg-replace="false"> </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="Field" class="middle">
+											<i class="fa fa-user fa-graduation-cap"></i> رشته
+											<span class="reveal__validation-error">*</span>
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" data-val="true" data-val-required="The Field field is required." id="Field" name="Field" type="text" value="">
+									<span class="field-validation-valid" data-valmsg-for="Field" data-valmsg-replace="false"> </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="Name" class="middle">
+											<i class="fa fa-user fa-fw"></i> نام
+											<span class="reveal__validation-error">*</span>
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" type="text" value="">
+									<span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="false"> </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="Family" class="middle">
+											<i class="fa fa-user fa-fw"></i> نام خانوادگی
+											<span class="reveal__validation-error">*</span>
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" data-val="true" data-val-required="The Family field is required." id="Family" name="Family" type="text" value="">
+									<span class="field-validation-valid" data-valmsg-for="Family" data-valmsg-replace="false"> </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="NationalCode" class="middle">
+											<i class="fa fa-barcode"></i> کد ملی
+											<span class="reveal__validation-error">*</span>
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" data-val="true" data-val-required="The NationalCode field is required." id="NationalCode" name="NationalCode" type="text"
+									    value="">
+									<span class="field-validation-valid" data-valmsg-for="NationalCode" data-valmsg-replace="false"> </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="Mobile" class="middle">
+											<i class="fa fa-mobile fa-fw"></i> موبایل
+											<span class="reveal__validation-error">*</span>
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" data-val="true" data-val-required="The Mobile field is required." id="Mobile" name="Mobile" type="text" value="">
+									<span class="field-validation-valid" data-valmsg-for="Mobile" data-valmsg-replace="false"> </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="Email" class="middle">
+											<i class="fa fa-envelope fa-fw"></i> ایمیل
+											<span class="reveal__validation-error">*</span>
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" data-val="true" data-val-required="The Email field is required." id="Email" name="Email" type="text" value="">
+									<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="false"> </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="AuthorId" class="middle"><i class="fa fa-newspaper-o fa-fw"></i>
+											Author ID
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" id="AuthorId" name="AuthorId" type="text" value="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="GoogleScholarAddress" class="middle"><i class="fa fa-google fa-fw"></i>
+											GoogleScholar Address
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" id="GoogleScholarAddress" name="GoogleScholarAddress" type="text" value="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="FaNickname" class="middle"><i class="fa fa-wpforms fa-fw"></i>
+											نام متداول فارسی
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" id="FaNickname" name="FaNickname" type="text" value="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="EnNickname1" class="middle"><i class="fa fa-wpforms fa-fw"></i>
+											نام متداول انگلیسی 1
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" id="EnNickname1" name="EnNickname1" type="text" value="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="EnNickname2" class="middle"><i class="fa fa-wpforms fa-fw"></i>
+											نام متداول انگلیسی 2
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" id="EnNickname2" name="EnNickname2" type="text" value="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="EnNickname3" class="middle"><i class="fa fa-wpforms fa-fw"></i>
+											نام متداول انگلیسی 3
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-7 columns">
+									<input class="reveal__input" id="EnNickname3" name="EnNickname3" type="text" value="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="" class="middle"><i class="fa fa-bars fa-fw"></i>
+											شرح درخواست
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-12 columns">
+									<textarea cols="70" id="Description" name="Description" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 medium-5 columns">
+									<div class="reveal__name">
+										<label for="" class="middle"><i class="fa fa-file-archive-o"></i>
+											حکم کارگزینی
+										</label>
+									</div>
+								</div>
+								<div class="small-12 medium-12 columns">
+									<input class="hollow button secondary" type="file" name="PersonelWarrant">
+								</div>
+							</div>
+							<div class="row">
+								<div class="medium-12 column">
+									<input type="submit" class="button footer__submit" value="ارسال">
+								</div>
+							</div>
+							<button class="close-button reveal__close-button" data-close="submit-form" aria-label="Close modal" type="button">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="columns column-block">
+				<h3 class="footer__header">
+					آمار بازدید
+				</h3>
+				<table class="footer__table unstriped">
+					<tbody>
+						<tr>
+							<th>کاربران آنلاین:</th>
+							<td>۳</td>
+						</tr>
+						<tr>
+							<th>بازدید امروز:</th>
+							<td>۶</td>
+						</tr>
+						<tr>
+							<th>بازدید کل:</th>
+							<td>۴۵۶۳</td>
+						</tr>
+						<tr>
+							<th>تعداد دانشگاه ها:</th>
+							<td>۹۴</td>
+						</tr>
+						<tr>
+							<th>تعداد مر اکز تحقیقاتی:</th>
+							<td>۲۷</td>
+						</tr>
+						<tr>
+							<th>اعضای هیأت علمی دارای پروفایل:</th>
+							<td>۱۵۳۱</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="columns column-block">
+				<h3 class="footer__header">
+					تماس با ما
+				</h3>
+				<p class="footer__body">
+					آدرس: تهران، انتهای تهران، پونک، انتهای اشرفی اصفهانی، به سمت حصارک، سازمان مرکزی دانشگاه آزاد اسلامی، بلوک یک، طبقات پنجم،
+					ششم و هفتم
+					<br> تلفن تماس: ۴۷۳۵۱۷۰۲ <br> پست الکترونیک: med.iau1392@gmail.com
+				</p>
+			</div>
+			<div class="columns column-block">
+				<h3 class="footer__header">
+					حفظ مالکیت معنوی
+				</h3>
+				<p class="footer__body">
+					کلیه حقوق این وب سایت و مطالب آن متعلق به گروه علم سنجی معاونت پزشکی دانشگاه آزاد اسلامی بوده و هر استفاده از مطالب آن با
+					ذکر منبع بلامانع است.
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="dist/app.bundle.js"></script>
+
+</html>

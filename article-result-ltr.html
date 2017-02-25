@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <!--suppress HtmlFormInputWithoutLabel -->
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>بانک مقالات سامانه مدیریت داده‌های پژوهش و فناوری (سایمد)</title>
-	<script src="dist/vendor.bundle.js"></script>
+	<script src="dist/vendor_ltr.bundle.js"></script>
 	<link rel="stylesheet" href="dist/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="dist/vendor/select2/css/select2.min.css">
+	<link rel="stylesheet" href="dist/vendor/select2/css/select2-foundation.css">
 	<link rel="stylesheet" href="dist/font/font.css">
 </head>
 
@@ -16,9 +18,7 @@
 	<div class="row">
 		<div class="medium-6 columns">
 			<div class="header__logo">
-				<a href="index.html">
-					<img src="dist/image/logo.png" alt="بانک مقالات ">
-				</a>
+				<img src="dist/image/logo.png" alt="بانک مقالات ">
 			</div>
 		</div>
 		<div class="medium-6 columns">
@@ -51,130 +51,134 @@
 	</div>
 	<div class="row">
 		<div class="column" dir="ltr">
-			<a href="index-ltr.html">En</a> /
-			<span>فارسی</span>
+			<span>En</span> /
+			<a href="article-result.html">فارسی</a>
 		</div>
 	</div>
 </header>
-<main class="search">
-	<section class="quick-search">
-		<h1 class="quick-search__title quick-search__column">جستجوی سریع مقاله</h1>
-		<input type="text" title="quick search" placeholder="کلید واژه بر اساس فیلد مورد نظر" class="quick-search__input quick-search__column"/>
-		<select class="quick-search__select quick-search__column quick-search__select_color-scooter" title="Article Title">
-			<option value="">عنوان مقاله</option>
-		</select>
-		<button type="button" class="button-slider quick-search__button quick-search__column quick-search__button_color-cold-purple">
-			<span class="button-slider__item selected">فارسی</span>
-			<span class="button-slider__item">EN</span>
-		</button>
-		<button type="button"
-				  class="quick-search__button quick-search__column quick-search__button_color-primary quick-search__button_border-side-radius">
-			<img src="dist/image/magnifier-icon.svg" alt="search" class="quick-search__button-icon">
-		</button>
-	</section>
-	<section id="search-detail">
-		<div class="row search-detail">
-			<div class="large-12 columns">
-				<h3 class="text-center search-detail__header">تعیین جزئیات برای جستجو</h3>
-			</div>
-			<div class="small-up-1 medium-up-2 large-up-5">
-				<div class="columns column-black text-center">
-					<img src="dist/image/calendar.svg" class="search-detail__image" alt="تاریخ">
-					<div class="row small-up-2 medium-up-2 large-up-2 collapse">
-						<div class="columns column-block">
-							<select class="search-detail__select">
-								<option value="">از تاریخ</option>
-							</select>
-						</div>
-						<div class="columns column-block">
-							<select class="search-detail__select">
-								<option value="">تا تاریخ</option>
-							</select>
-						</div>
-					</div>
-				</div>
-				<div class="columns column-black text-center">
-					<img src="dist/image/file-pile.svg" class="search-detail__image" alt="همه انواع">
-					<select class="search-detail__select">
-						<option value="">همه انواع</option>
-					</select>
-				</div>
-				<div class="columns column-black text-center">
-					<img src="dist/image/computer-user.svg" class="search-detail__image" alt="همه نویسندگان">
-					<select class="search-detail__select">
-						<option value="">همه نویسندگان</option>
-					</select>
-				</div>
-				<div class="columns column-black text-center">
-					<img src="dist/image/book.svg" class="search-detail__image" alt="همه نشریات">
-					<select class="search-detail__select">
-						<option value="">همه نشریات</option>
-					</select>
-				</div>
-				<div class="columns column-black text-center medium-centered">
-					<img src="dist/image/question.svg" class="search-detail__image" alt="همه منابع">
-					<select class="search-detail__select">
-						<option value="">همه منابع</option>
-					</select>
+<section id="page-title">
+	<div class="row small-12 medium-12 large-12 columns">
+		<div class="page-title">
+			<div class="row">
+				<div class="small-12 medium-12 large-12 columns">
+					<h1 class="page-title__header">جزئیات مقاله</h1>
 				</div>
 			</div>
 		</div>
-	</section>
-	<section id="search-advance">
-		<div class="row search-advance">
-			<div class="large-12 columns">
-				<h3 class="text-center search-advance__header">محدود کردن نتایج جستجو بر اساس افیلیشن</h3>
+	</div>
+</section>
+<section id="article-result">
+	<div class="row small-12 medium-12 large-12 columns">
+		<div class="article-result__journalinfo">
+			<div class="article-result__journalinfo-title">
+				<a class="article-result__journalinfo-link" href="">نشریه</a>
 			</div>
-			<div class="small-up-1 medium-up-2 large-up-4">
-				<div class="columns column-block">
-					<label class="text-center search-advance__label">نام دانشگاه</label>
-					<select class="search-advance__select university-name" style="width: 100%">
-						<option></option>
-						<option value="0">دانشگاه تهران جنوب</option>
-						<option value="1">دانشگاه اراک</option>
-						<option value="2">دانشگاه اصفهان</option>
-						<option value="3">دانشگاه تبریز</option>
-						<option value="4">دانشگاه شیراز</option>
-						<option value="5">دانشگاه مشهد</option>
-					</select>
-				</div>
-				<div class="columns column-block">
-					<label class="text-center search-advance__label">نام دانشکده
-						<select class="search-advance__select">
-							<option value="">دانشکده فنی مهندسی</option>
-							<option value="">دانشکده پزشکی</option>
-							<option value="">دانشکده علوم انسانی</option>
-						</select>
-					</label>
-				</div>
-				<div class="columns column-block">
-					<label class="text-center search-advance__label">نام مرکز تحقیقاتی
-						<select class="search-advance__select">
-							<option value="">مرکز تحقیقاتی بهار</option>
-							<option value="">مرکز تحقیقاتی اراک</option>
-							<option value="">مرکز تحقیقاتی اصفهان</option>
-							<option value="">مرکز تحقیقاتی تبریز</option>
-							<option value="">مرکز تحقیقاتی شیراز</option>
-							<option value="">مرکز تحقیقاتی مشهد</option>
-						</select>
-					</label>
-				</div>
-				<div class="columns column-block">
-					<label class="text-center search-advance__label">نام گروه
-						<select class="search-advance__select">
-							<option value="">گروه تهران</option>
-							<option value="">گروه اراک</option>
-							<option value="">گروه اصفهان</option>
-							<option value="">گروه تبریز</option>
-							<option value="">گروه شیراز</option>
-							<option value="">گروه مشهد</option>
-						</select>
-					</label>
-				</div>
+			<div class="article-result__journalinfo-descrption">
+				<span>دوره 17, شماره 2, , صفحات 0-0</span>
 			</div>
 		</div>
-	</section>
-</main>
+		<div class="article-result__article">
+			<div class="article-result__article-title">
+				<sapn>Is herpes zoster a risk factor for subsequent malignancy?</sapn>
+			</div>
+			<div class="article-result__article-authors">
+				<span>نویسندگان:</span>
+				<a class="article-result__article-authors-name" href="author-detail.html">Najafvandzadeh, M</a>
+				<a class="article-result__article-authors-name" href="author-detail.html">نسیم بهرامی</a>
+				<a class="article-result__article-authors-name" href="author-detail.html">محمد علی سلیماتی</a>
+			</div>
+		</div>
+		<div class="article-result__features">
+			<div class="article-result__features-title">
+				<span>نسخه&zwnj;های دیگر</span>
+			</div>
+			<div class="article-result__features-info">
+				<a class="article-result__features-info-link" href="#"><i class="fa fa-file-word-o fa-2x"></i></a>
+				<a class="article-result__features-info-link" href="#"><i class="fa fa-file-pdf-o fa-2x"></i></a>
+			</div>
+		</div>
+		<div class="article-result__abstract">
+			<div class="article-result__abstract-title">
+				چکیده
+			</div>
+			<div class="article-result__abstract-text">
+				<p class="text-justify">
+					Introduction: The relation between herpes zoster (shingles) and malignancy has been studied for many years. It has been well
+					established that the herpes zoster occurs more frequently in patients with known malignancy but, whether that previous herpes zoster is
+					associated with subsequent risk of malignancy is still controversial and so far studies have led to conflicting results. Therefore we
+					designed this study in order to investigate a possible relationship between the previous shingles and subsequent risk of malignancies.
+					Materials and Methods: This case-control study consisted of 268 adult patients (≥ 18 years) with diagnosis of malignancy (case group),
+					who referred to Fatemieh hospital in Semnan, Iran. Oncology diagnosis of malignancy was based on medical history, clinical findings,
+					and laboratory and pathology results. Adult patients without history of malignancy (n=268) were selected as control group. In both
+					groups, age, gender and history information about shingles, type of malignancy and the interval between occurrence of shingles and
+					cancer diagnosis were recorded in a check list. Patients with uncertain shingles history excluded from the study. Results: The age and
+					gender were similar in both control and case groups (p&amp;gt;0.05). History of herpes zoster was positive in 4.9%(13 patients) of case
+					group and in 10.4% (28 patients) of the control group. The difference between the positive cases in two groups was significant
+					(OR=0.440, 95% CI: 0.22-0.86, p=0.017). The relation between shingles history and malignancy was not significant between genders. Also,
+					the association between shingles history and malignancy in patients with 60 years of age or over was not significant, but association
+					between shingles history and malignancy in patients less than 60 years of age was significant (OR=0.19, 95% CI:0.05- 0.67, p=0.010).
+					Conclusion: Our findings showed that herpes zoster might not be a risk factor for subsequent malignancy, though in contrast, it may
+					produce a protective effect against the occurrence of malignancy. Further studies with larger samples at the cellular and immunological
+					levels are recommended to more clear the relation between zoster and later malignancies. © 2015, Singapore Medical Association. All
+					rights reserved.
+				</p>
+			</div>
+		</div>
+		<div class="article-result__keyword">
+			<div class="article-result__keyword-title">
+				کلیدواژه
+			</div>
+			<div class="article-result__keyword-list">
+				<a class="article-result__keyword-list-link">malignancy</a>
+				<a class="article-result__keyword-list-link">subsequent</a>
+				<a class="article-result__keyword-list-link">zoster</a>
+			</div>
+		</div>
+		<div class="article-result__publish">
+			<div class="article-result__publish-title">
+				این مقاله فهرست شده در
+			</div>
+			<div class="article-result__publish-list">
+				<a class="article-result__publish-list-link">ISI</a>
+				<a class="article-result__publish-list-link">Scopus</a>
+			</div>
+		</div>
+		<div class="article-result__relatedArticles">
+			<div class="article-result__relatedArticles-title">
+				مقالات مرتبط
+			</div>
+			<div class="article-result__relatedArticles-list">
+				<ul class="menu vertical">
+					<li class="">
+						<a class="article-result__relatedArticles-list-link">Is herpes zoster a risk factor for subsequent malignancy?</a>
+					</li>
+					<li class="">
+						<a class="article-result__relatedArticles-list-link">بررسی استريای حاملگی و عوامل خطر مرتبط با آن در زنان نخست‌زای مراجعه‌کننده به
+							بيمارستان امام رضا (ع) شهرستان اروميه</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="article-result__articlesDetail">
+			<div class="article-result__articlesDetail-list">
+				<ul class="menu vertical">
+					<li class="article-result__articlesDetail-list-title">
+						شاپا: <span class="article-result__articlesDetail-list-detail">23131-313</span>
+					</li>
+					<li class="article-result__articlesDetail-list-title">
+						نوع منبع: <span class="article-result__articlesDetail-list-detail">پژوهشی</span>
+					</li>
+					<li class="article-result__articlesDetail-list-title">
+						زبان اصلی: <span class="article-result__articlesDetail-list-detail">پارسی</span>
+					</li>
+					<li class="article-result__articlesDetail-list-title">
+						نوع مقاله: <span class="article-result__articlesDetail-list-detail">Original | پژوهشی</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
 <footer class="footer">
 	<div class="row small-up-1 medium-up-2 large-up-4">
 		<div class="columns column-block">
@@ -482,5 +486,24 @@
 </footer>
 </body>
 <script src="dist/app.bundle.js"></script>
+<script src="node_modules/foundation-sites/vendor/jquery/dist/jquery.min.js"></script>
+<script src="dist/vendor/select2/js/select2.min.js"></script>
+<script type="text/javascript">
+   $( document ).ready(
+      function() {
+         $( ".university-name" ).select2(
+            {
+               placeholder: "نام دانشگاه را انتخاب کنید",
+               theme: "foundation",
+               language: {
+                  noResults: function( params ) {
+                     return "موردی یافت نشد";
+                  }
+               }
+            }
+         );
+      }
+   );
+</script>
 
 </html>
